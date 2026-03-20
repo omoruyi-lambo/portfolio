@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omoruyi Isaiah | Frontend Developer Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="portfolio-styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="logo-icon">💻</span>
+                <span class="logo-text">Omoruyi Isaiah</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=1920&h=1080&fit=crop&q=80');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Hi, I'm Omoruyi Isaiah</h1>
+            <p class="subtitle">Frontend Web Developer</p>
+            <p class="description">Crafting beautiful, responsive websites and web applications with HTML, CSS, and JavaScript</p>
+            <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior: 'smooth'})">Get In Touch</button>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-label">About Me</div>
+            <div class="about-wrapper">
+                <div class="about-left">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=650&fit=crop&q=80" alt="Omoruyi Isaiah" class="profile-photo">
+                        <div class="image-decoration"></div>
+                    </div>
+                </div>
+
+                <div class="about-right">
+                    <h2>Frontend Developer & UI Enthusiast</h2>
+                    <p class="about-intro">I'm Omoruyi Isaiah, a frontend web developer passionate about creating beautiful, user-friendly web experiences. I transform designs into responsive, interactive websites using modern HTML, CSS, and JavaScript.</p>
+
+                    <div class="about-description">
+                        <div class="desc-item">
+                            <div class="desc-icon">🎨</div>
+                            <div>
+                                <h4>My Focus</h4>
+                                <p>I specialize in clean, semantic HTML5, modern CSS3, and vanilla JavaScript to build responsive web interfaces that work perfectly on all devices.</p>
+                            </div>
+                        </div>
+                        <div class="desc-item">
+                            <div class="desc-icon">💡</div>
+                            <div>
+                                <h4>My Approach</h4>
+                                <p>I focus on writing clean, maintainable code and creating pixel-perfect designs that provide excellent user experiences.</p>
+                            </div>
+                        </div>
+                        <div class="desc-item">
+                            <div class="desc-icon">🚀</div>
+                            <div>
+                                <h4>My Goal</h4>
+                                <p>To build engaging, accessible web experiences that help businesses connect with their users effectively.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="about-stats">
+                <div class="stat-box">
+                    <div class="stat-number">1+</div>
+                    <div class="stat-label">Years Learning</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">10+</div>
+                    <div class="stat-label">Projects Built</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Code Commits</div>
+                </div>
+                <div class="stat-box">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label">Learning Drive</div>
+                </div>
+            </div>
+                    <div class="stat-label">Satisfaction</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <div class="skills-header">
+                <span class="section-label">My Expertise</span>
+                <h2>My Skills</h2>
+                <p class="skills-intro">Proficient in modern web technologies and frameworks</p>
+            </div>
+            
+            <div class="skills-tabs">
+                <button class="tab-btn active" data-tab="frontend">Frontend</button>
+                <button class="tab-btn" data-tab="tools">Tools & Frameworks</button>
+                <button class="tab-btn" data-tab="all">All Skills</button>
+            </div>
+
+            <div class="skills-grid">
+                <!-- Frontend Skills -->
+                <div class="skill-category" data-category="frontend">
+                    <h3>Frontend Technologies</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">HTML5</span>
+                                <span class="skill-level">90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 90%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">CSS3</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">JavaScript</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Responsive Design</span>
+                                <span class="skill-level">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Tools Skills -->
+                <div class="skill-category" data-category="tools">
+                    <h3>Tools & Frameworks</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Git & GitHub</span>
+                                <span class="skill-level">85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 85%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Chrome DevTools</span>
+                                <span class="skill-level">88%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 88%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">API Integration</span>
+                                <span class="skill-level">80%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 80%;"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span class="skill-name">Testing & Debugging</span>
+                                <span class="skill-level">82%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" style="width: 82%;"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop&q=80" alt="Personal Portfolio" class="project-image">
+                    <h3>Personal Portfolio Website</h3>
+                    <p>A fully responsive portfolio website showcasing my frontend skills with smooth scrolling navigation and modern design.</p>
+                    <div class="tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop&q=80" alt="Todo App" class="project-image">
+                    <h3>Todo List Application</h3>
+                    <p>Interactive todo app with add, delete, and filter functionality. Demonstrates DOM manipulation and local storage usage.</p>
+                    <div class="tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1499750310107-5fef28a66643?w=500&h=300&fit=crop&q=80" alt="Weather App" class="project-image">
+                    <h3>Weather App</h3>
+                    <p>Real-time weather application using API integration. Shows weather data for any location with a clean, responsive interface.</p>
+                    <div class="tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>REST API</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop&q=80" alt="Calculator" class="project-image">
+                    <h3>JavaScript Calculator</h3>
+                    <p>Fully functional calculator built with vanilla JavaScript. Features clean UI, keyboard support, and responsive design.</p>
+                    <div class="tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=500&h=300&fit=crop&q=80" alt="Online Store" class="project-image">
+                    <h3>E-Commerce Product Page</h3>
+                    <p>Product showcase with interactive filters, shopping cart functionality, and checkout process demonstration.</p>
+                    <div class="tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                        <span>Responsive Design</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+
+                <div class="project-card">
+                    <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=500&h=300&fit=crop&q=80" alt="Blog Landing" class="project-image">
+                    <h3>Blog Landing Page</h3>
+                    <p>Modern, responsive blog landing page with featured articles section and newsletter signup form.</p>
+                    <div class="tech-stack">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>Responsive Design</span>
+                    </div>
+                    <a href="#" class="project-link">View Project →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Services I Offer</h2>
+            <p class="services-intro">As a frontend developer, I provide comprehensive web development services focused on creating beautiful, functional websites</p>
+            <div class="services-wrapper">
+                <div class="service-item">
+                    <div class="service-header">
+                        <div class="service-number">01</div>
+                        <div class="service-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+                                <line x1="2" y1="20" x2="22" y2="20"></line>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Website Design & Development</h3>
+                    <p>Build stunning, responsive websites from scratch using HTML5, CSS3, and JavaScript. I create websites that look great on all devices and engage visitors.</p>
+                    <div class="service-tech">
+                        <span>HTML5</span>
+                        <span>CSS3</span>
+                        <span>JavaScript</span>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-header">
+                        <div class="service-number">02</div>
+                        <div class="service-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M12 2v20M2 12h20M6.5 6.5l11 11M6.5 17.5l11-11"></path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Responsive Web Design</h3>
+                    <p>Create websites that adapt seamlessly to desktop, tablet, and mobile devices. Responsive design ensures your site looks perfect everywhere.</p>
+                    <div class="service-tech">
+                        <span>Mobile-First</span>
+                        <span>Media Queries</span>
+                        <span>Flexbox/Grid</span>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-header">
+                        <div class="service-number">03</div>
+                        <div class="service-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Interactive Web Applications</h3>
+                    <p>Build dynamic web applications with smooth interactions and engaging user experiences using vanilla JavaScript or modern frameworks.</p>
+                    <div class="service-tech">
+                        <span>DOM Manipulation</span>
+                        <span>Event Handling</span>
+                        <span>API Integration</span>
+                    </div>
+                </div>
+
+                <div class="service-item">
+                    <div class="service-header">
+                        <div class="service-number">04</div>
+                        <div class="service-icon-box">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3>Web Performance Optimization</h3>
+                    <p>Optimize websites for speed, SEO, and user experience. Fast-loading, accessible websites that rank well and keep visitors engaged.</p>
+                    <div class="service-tech">
+                        <span>Performance</span>
+                        <span>SEO</span>
+                        <span>Accessibility</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="contact-header">
+                <div class="section-label">Contact Me</div>
+                <h2>Let's Work Together</h2>
+                <p class="contact-subtitle">Have a project in mind? I'd love to help bring your vision to life. Get in touch and let's create something amazing.</p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
+                                <path d="M22 4l-10 7L2 4"></path>
+                            </svg>
+                        </div>
+                        <h3>Email</h3>
+                        <p><a href="mailto:isaiahomoruyi4@gmail.com">isaiahomoruyi4@gmail.com</a></p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                            </svg>
+                        </div>
+                        <h3>Phone</h3>
+                        <p><a href="tel:+234xxx">+234 (0) xxx xxx xxxx</a></p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                <circle cx="12" cy="10" r="3"></circle>
+                            </svg>
+                        </div>
+                        <h3>Location</h3>
+                        <p>Nigeria</p>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-card-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                                <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                            </svg>
+                        </div>
+                        <h3>Connect With Me</h3>
+                        <div class="social-links">
+                            <a href="#" target="_blank" class="social-link" title="GitHub">GitHub</a><br>
+                            <a href="#" target="_blank" class="social-link" title="LinkedIn">LinkedIn</a><br>
+                            <a href="#" target="_blank" class="social-link" title="Twitter">Twitter</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="user_name">Full Name</label>
+                            <input type="text" id="user_name" name="user_name" placeholder="John Doe" required>
+                            <div class="form-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="user_email">Email Address</label>
+                            <input type="email" id="user_email" name="user_email" placeholder="john@example.com" required>
+                            <div class="form-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" placeholder="Project Discussion" required>
+                            <div class="form-line"></div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project..." rows="7" required></textarea>
+                            <div class="form-line"></div>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-large">Send Message</button>
+                        <div id="formMessage" style="margin-top: 10px; text-align: center;"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <!-- Footer Top - Newsletter/CTA -->
+            <div class="footer-top">
+                <div class="footer-cta">
+                    <h3>Let's Build Something Amazing</h3>
+                    <p>Ready to start your next web project? Let's connect and create something extraordinary.</p>
+                    <a href="#contact" class="cta-button">Get In Touch</a>
+                </div>
+            </div>
+
+            <!-- Footer Main Content -->
+            <div class="footer-main">
+                <!-- Brand Section -->
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <span class="logo-icon">💻</span>
+                        <span>Omoruyi Isaiah</span>
+                    </div>
+                    <p>Frontend Developer passionate about building beautiful, responsive web experiences.</p>
+                    <div class="footer-social">
+                        <a href="#" target="_blank" title="GitHub" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v 3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                        </a>
+                        <a href="#" target="_blank" title="LinkedIn" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.475-2.236-1.986-2.236-1.081 0-1.722.725-2.004 1.424-.103.249-.129.597-.129.946v5.435h-3.555V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.931-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.134-.924 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+                        </a>
+                        <a href="#" target="_blank" title="Twitter" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.953 4.57a10 10 0 002.856-9.86 9.958 9.958 0 01-2.836.856 4.958 4.958 0 00-8.72 4.573 14.1 14.1 0 01-10.25-5.218 4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
+                        </a>
+                        <a href="#" target="_blank" title="Email" class="social-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About Me</a></li>
+                        <li><a href="#projects">Projects</a></li>
+                        <li><a href="#skills">Skills</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Website Design</a></li>
+                        <li><a href="#services">Responsive Design</a></li>
+                        <li><a href="#services">Interactive Apps</a></li>
+                        <li><a href="#services">Performance</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:isaiahomoruyi4@gmail.com">isaiahomoruyi4@gmail.com</a></li>
+                        <li><a href="tel:+234xxx">+234 (0) xxx xxx xxxx</a></li>
+                        <li><span>Nigeria</span></li>
+                        <li><span>Available for Freelance</span></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="footer-divider"></div>
+                <div class="footer-credits">
+                    <p>&copy; 2026 Omoruyi Isaiah. All Rights Reserved.</p>
+                    <p>Designed & Developed with <span class="heart">♥</span> | Frontend Developer</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="portfolio-script.js"></script>
+</body>
+</html>
