@@ -8,65 +8,118 @@ if (typeof emailjs !== "undefined") {
     emailjs.init(EMAILJS_PUBLIC_KEY);
 }
 
+const body = document.body;
+const navToggle = document.getElementById("navToggle");
+const navPanel = document.getElementById("navPanel");
 const navLinks = document.querySelectorAll(".nav-link");
-const sections = document.querySelectorAll("section");
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav-menu");
-const contactForm = document.getElementById("contactForm");
-const formMessage = document.getElementById("formMessage");
-const tabButtons = document.querySelectorAll(".tab-btn");
-const skillCategories = document.querySelectorAll(".skill-category");
+const sections = document.querySelectorAll("section[id]");
 const themeToggle = document.getElementById("themeToggle");
 const themeToggleText = document.querySelector(".theme-toggle-text");
+const contactForm = document.getElementById("contactForm");
+const formMessage = document.getElementById("formMessage");
+const revealItems = document.querySelectorAll("[data-reveal]");
+const disabledLinks = document.querySelectorAll("[data-disabled-link]");
 
 const setTheme = (theme) => {
-    document.body.dataset.theme = theme;
+    body.dataset.theme = theme;
 
     if (themeToggleText) {
         themeToggleText.textContent = theme === "dark" ? "Light Mode" : "Dark Mode";
     }
 };
 
-const storedTheme = window.localStorage.getItem("portfolio-theme");
-const prefersDarkTheme = window.matchMedia("(prefers-color-scheme: dark)").matches;
-const initialTheme = storedTheme || (prefersDarkTheme ? "dark" : "light");
-
-setTheme(initialTheme);
+const storedTheme = window.localStorage.getItem("lambo-code-theme");
+setTheme(storedTheme || "dark");
 
 if (themeToggle) {
     themeToggle.addEventListener("click", () => {
-        const nextTheme = document.body.dataset.theme === "dark" ? "light" : "dark";
+        const nextTheme = body.dataset.theme === "dark" ? "light" : "dark";
         setTheme(nextTheme);
-        window.localStorage.setItem("portfolio-theme", nextTheme);
+        window.localStorage.setItem("lambo-code-theme", nextTheme);
     });
 }
+
+const closeMenu = () => {
+    if (!navPanel || !navToggle) {
+        return;
+    }
+
+    navPanel.classList.remove("is-open");
+    navToggle.setAttribute("aria-expanded", "false");
+    body.classList.remove("menu-open");
+};
+
+if (navToggle && navPanel) {
+    navToggle.addEventListener("click", () => {
+        const isOpen = navPanel.classList.toggle("is-open");
+        navToggle.setAttribute("aria-expanded", String(isOpen));
+        body.classList.toggle("menu-open", isOpen);
+    });
+}
+
+navLinks.forEach((link) => {
+    link.addEventListener("click", () => {
+        closeMenu();
+    });
+});
+
+document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+    anchor.addEventListener("click", function (event) {
+        const targetSelector = this.getAttribute("href");
+        const target = document.querySelector(targetSelector);
+
+        if (!target) {
+            return;
+        }
+
+        event.preventDefault();
+        closeMenu();
+        target.scrollIntoView({
+            behavior: "smooth",
+            block: "start"
+        });
+    });
+});
 
 window.addEventListener("scroll", () => {
     let currentSection = "";
 
     sections.forEach((section) => {
         const sectionTop = section.offsetTop;
-        if (window.pageYOffset >= sectionTop - 200) {
+        if (window.pageYOffset >= sectionTop - 160) {
             currentSection = section.getAttribute("id");
         }
     });
 
     navLinks.forEach((link) => {
-        link.classList.toggle("active", link.getAttribute("href").slice(1) === currentSection);
+        const linkTarget = link.getAttribute("href").slice(1);
+        link.classList.toggle("active", linkTarget === currentSection);
     });
 });
 
-if (hamburger && navMenu) {
-    hamburger.addEventListener("click", () => {
-        navMenu.classList.toggle("active");
+disabledLinks.forEach((link) => {
+    link.addEventListener("click", (event) => {
+        event.preventDefault();
     });
+});
 
-    navLinks.forEach((link) => {
-        link.addEventListener("click", () => {
-            navMenu.classList.remove("active");
-        });
+const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+            return;
+        }
+
+        entry.target.classList.add("is-visible");
+        revealObserver.unobserve(entry.target);
     });
-}
+}, {
+    threshold: 0.14,
+    rootMargin: "0px 0px -50px 0px"
+});
+
+revealItems.forEach((item) => {
+    revealObserver.observe(item);
+});
 
 const setFormMessage = (message, color) => {
     if (!formMessage) {
@@ -78,7 +131,7 @@ const setFormMessage = (message, color) => {
 };
 
 const buildWhatsappMessage = ({ userName, userEmail, userPhone, subject, message }) => [
-    "Hello Isaiah,",
+    "Hello Lambo Code,",
     `My name is ${userName}.`,
     `Email: ${userEmail}`,
     `Phone: ${userPhone}`,
@@ -113,14 +166,14 @@ if (contactForm) {
             submitButton.textContent = "Sending...";
         }
 
-        setFormMessage("Sending your details to email and preparing WhatsApp...", "#60a5fa");
+        setFormMessage("Sending your brief to email and preparing WhatsApp...", "#f1cb55");
 
         if (typeof emailjs === "undefined") {
-            setFormMessage("WhatsApp is ready, but email delivery is not configured in this browser right now.", "#fbbf24");
+            setFormMessage("WhatsApp is ready, but email delivery is not configured in this browser right now.", "#f1cb55");
 
             if (submitButton) {
                 submitButton.disabled = false;
-                submitButton.textContent = "Send Project Brief";
+                submitButton.textContent = "Send Brief";
             }
 
             return;
@@ -146,11 +199,11 @@ if (contactForm) {
                 message: emailBody
             });
 
-            const popupMessage = whatsappWindow
-                ? "Your message was sent to email and WhatsApp has been opened for fast follow-up."
-                : "Your message was sent to email. If WhatsApp did not open, use the WhatsApp link on the page.";
+            const successMessage = whatsappWindow
+                ? "Your brief has been sent to email and WhatsApp has been opened for fast follow-up."
+                : "Your brief has been sent to email. If WhatsApp did not open, use the WhatsApp link on the page.";
 
-            setFormMessage(popupMessage, "#10b981");
+            setFormMessage(successMessage, "#22c55e");
             contactForm.reset();
         } catch (error) {
             console.error("EmailJS send failed:", error);
@@ -158,124 +211,8 @@ if (contactForm) {
         } finally {
             if (submitButton) {
                 submitButton.disabled = false;
-                submitButton.textContent = "Send Project Brief";
+                submitButton.textContent = "Send Brief";
             }
         }
     });
 }
-
-tabButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-        const tabValue = button.getAttribute("data-tab");
-
-        tabButtons.forEach((item) => item.classList.remove("active"));
-        skillCategories.forEach((category) => category.classList.remove("active"));
-
-        button.classList.add("active");
-
-        if (tabValue === "all") {
-            skillCategories.forEach((category) => category.classList.add("active"));
-            return;
-        }
-
-        skillCategories.forEach((category) => {
-            if (category.getAttribute("data-category") === tabValue) {
-                category.classList.add("active");
-            }
-        });
-    });
-});
-
-if (tabButtons.length > 0) {
-    tabButtons[0].classList.add("active");
-}
-
-skillCategories.forEach((category) => {
-    if (category.getAttribute("data-category") === "frontend") {
-        category.classList.add("active");
-    }
-});
-
-const skillsSection = document.querySelector(".skills");
-
-if (skillsSection) {
-    const skillObserver = new IntersectionObserver((entries) => {
-        entries.forEach((entry) => {
-            if (!entry.isIntersecting) {
-                return;
-            }
-
-            const progressBars = entry.target.querySelectorAll(".skill-progress");
-            progressBars.forEach((bar) => {
-                const width = bar.style.width;
-                bar.style.width = "0";
-                setTimeout(() => {
-                    bar.style.width = width;
-                }, 100);
-            });
-
-            skillObserver.unobserve(entry.target);
-        });
-    }, {
-        threshold: 0.1
-    });
-
-    skillObserver.observe(skillsSection);
-}
-
-document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
-    anchor.addEventListener("click", function (event) {
-        event.preventDefault();
-        const target = document.querySelector(this.getAttribute("href"));
-
-        if (target) {
-            target.scrollIntoView({
-                behavior: "smooth",
-                block: "start"
-            });
-        }
-    });
-});
-
-const observerOptions = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
-};
-
-const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = "1";
-            entry.target.style.transform = "translateY(0)";
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll(".project-card, .service-item, .testimonial-card, .stat-box, .desc-item, .skill-category").forEach((element) => {
-    element.style.opacity = "0";
-    element.style.transform = "translateY(20px)";
-    element.style.transition = "opacity 0.6s ease, transform 0.6s ease";
-    observer.observe(element);
-});
-
-document.querySelectorAll(".section-label, h2, .skills-header, .testimonials-header, .contact-header").forEach((element) => {
-    element.style.opacity = "0";
-    element.style.animation = "fadeInDown 0.8s ease forwards";
-    observer.observe(element);
-});
-
-const scrollObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry, index) => {
-        if (entry.isIntersecting) {
-            entry.target.style.animationDelay = `${index * 0.08}s`;
-            entry.target.classList.add("animate-on-scroll");
-        }
-    });
-}, {
-    threshold: 0.15,
-    rootMargin: "0px 0px -100px 0px"
-});
-
-document.querySelectorAll(".project-card, .service-item, .testimonial-card, .stat-box").forEach((element) => {
-    scrollObserver.observe(element);
-});

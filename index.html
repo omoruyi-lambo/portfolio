@@ -3,569 +3,434 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Omoruyi Isaiah | Full-Stack Website Developer</title>
+    <title>Lambo Code | Websites That Grow Your Business</title>
     <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Sora:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
     <link rel="stylesheet" href="styles.css">
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
-<body data-theme="light">
+<body data-theme="dark">
     <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">
-                <span class="logo-icon">&lt;/&gt;</span>
-                <span class="logo-text">Omoruyi Isaiah</span>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="#home" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <div class="nav-actions">
-                <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle site theme">
-                    <span class="theme-toggle-text">Dark Mode</span>
-                </button>
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
+        <div class="container nav-shell">
+            <a href="#home" class="brand-mark" aria-label="Lambo Code home">
+                <span class="brand-bracket">&lt;/</span>
+                <span class="brand-text">Lambo Code</span>
+                <span class="brand-bracket">&gt;</span>
+            </a>
+
+            <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="navPanel">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <div class="nav-panel" id="navPanel">
+                <ul class="nav-menu">
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#services" class="nav-link">Services</a></li>
+                    <li><a href="#process" class="nav-link">Process</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+
+                <div class="nav-actions">
+                    <button class="theme-toggle" id="themeToggle" type="button" aria-label="Toggle color mode">
+                        <span class="theme-toggle-text">Light Mode</span>
+                    </button>
+                    <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+to+start+a+project" target="_blank" rel="noreferrer" class="btn btn-primary">Start a Project</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <section id="home" class="hero">
-        <div class="hero-bg" style="background-image: url('https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=1920&h=1080&fit=crop&q=80');"></div>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-            <div class="hero-eyebrow">1.5 Years of Hands-On Website Development</div>
-            <h1>Full-Stack Websites for Restaurants and Modern Local Brands</h1>
-            <p class="subtitle">Frontend polish, backend logic, and admin dashboards that support real businesses</p>
-            <p class="description">I build responsive websites that look professional on every screen, connect to practical backend workflows, and make it easy for clients to reach you through email and WhatsApp.</p>
-            <div class="hero-actions">
-                <button class="btn btn-primary" onclick="document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })">Start a Project</button>
-                <a href="#projects" class="btn btn-secondary">View Projects</a>
-            </div>
-            <div class="hero-highlights">
-                <div class="hero-highlight">
-                    <strong>1.5 Years</strong>
-                    <span>Real-world learning and delivery</span>
-                </div>
-                <div class="hero-highlight">
-                    <strong>Restaurants</strong>
-                    <span>Full-stack build with admin dashboard</span>
-                </div>
-                <div class="hero-highlight">
-                    <strong>Responsive</strong>
-                    <span>Light mode and dark mode ready</span>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
+        <section id="home" class="hero">
+            <div class="container hero-inner">
+                <div class="section-chip" data-reveal>Websites That Grow Your Business</div>
+                <h1 data-reveal>Get a Website That Brings Customers to Your Door</h1>
+                <p class="hero-subheadline" data-reveal>Lambo Code builds sharp, full-stack websites for ambitious businesses that want premium presence, stronger trust, and a digital setup that actually moves revenue.</p>
 
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-label">About Me</div>
-            <div class="about-wrapper">
-                <div class="about-left">
-                    <div class="about-image">
-                        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=500&h=650&fit=crop&q=80" alt="Omoruyi Isaiah" class="profile-photo">
-                        <div class="image-decoration"></div>
+                <div class="hero-actions-row" data-reveal>
+                    <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+to+start+a+project" target="_blank" rel="noreferrer" class="btn btn-primary">Start a Project</a>
+                    <a href="#projects" class="btn btn-secondary">See My Work</a>
+                </div>
+
+                <div class="hero-stats" data-reveal>
+                    <div class="hero-stat">Full-Stack Build</div>
+                    <div class="hero-stat">Admin Dashboard</div>
+                    <div class="hero-stat">Paystack Ready</div>
+                    <div class="hero-stat">Benin City, Nigeria</div>
+                </div>
+
+                <p class="hero-pricing-line" data-reveal>Projects from &#8358;200,000 &mdash; Let&apos;s talk about yours.</p>
+            </div>
+        </section>
+
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <p class="section-kicker">About</p>
+                    <h2>I Build Websites That Make Your Business Look Established and Sell With Authority</h2>
+                </div>
+
+                <div class="about-grid">
+                    <div class="placeholder-frame photo-placeholder" data-reveal>
+                        <span class="placeholder-label">[YOUR PHOTO HERE]</span>
                     </div>
-                </div>
 
-                <div class="about-right">
-                    <h2>Clean, Modern Websites Backed by Full-Stack Thinking</h2>
-                    <p class="about-intro">With 1.5 years of hands-on experience, I build responsive websites that present businesses professionally and support practical workflows behind the scenes.</p>
+                    <div class="about-copy" data-reveal>
+                        <p>I&apos;m Omoruyi Isaiah &mdash; the developer behind Lambo Code.</p>
+                        <p>I build with the client&apos;s result in mind first. Your website should make you look premium, answer the right questions fast, remove friction, and turn visitors into paying customers.</p>
+                        <p>In 1.5 years, I&apos;ve focused on building websites that do more than sit online. I work with Node.js, MongoDB, Paystack, and admin dashboards so the business side works as hard as the design.</p>
+                        <p>If the goal is authority, clarity, bookings, payments, or daily business control, I build the kind of web experience that helps you move like a brand with real momentum.</p>
 
-                    <div class="about-description">
-                        <div class="desc-item">
-                            <div class="desc-icon">UI</div>
-                            <div>
-                                <h4>Frontend Craft</h4>
-                                <p>I focus on strong HTML, CSS, layout structure, and responsive design so every page looks polished on both desktop and mobile.</p>
-                            </div>
-                        </div>
-                        <div class="desc-item">
-                            <div class="desc-icon">API</div>
-                            <div>
-                                <h4>Real Project Experience</h4>
-                                <p>My strongest real project is a full-stack restaurant website with an admin dashboard, alongside this portfolio and client-facing business website work.</p>
-                            </div>
-                        </div>
-                        <div class="desc-item">
-                            <div class="desc-icon">ADM</div>
-                            <div>
-                                <h4>Backend Workflow</h4>
-                                <p>I work with backend integrations, data flow, and admin-focused features so websites do more than just look good on the surface.</p>
-                            </div>
+                        <div class="about-stack">
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Paystack</span>
+                            <span>Admin Dashboards</span>
                         </div>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <div class="about-stats">
-                <div class="stat-box">
-                    <div class="stat-number">1.5</div>
-                    <div class="stat-label">Years of Work</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">4</div>
-                    <div class="stat-label">Core Projects Featured</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">1</div>
-                    <div class="stat-label">Full-Stack Restaurant Build</div>
-                </div>
-                <div class="stat-box">
-                    <div class="stat-number">100%</div>
-                    <div class="stat-label">Responsive Design Focus</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="skills" class="skills">
-        <div class="container">
-            <div class="skills-header">
-                <span class="section-label">My Expertise</span>
-                <h2>My Skills</h2>
-                <p class="skills-intro">Frontend polish and backend technologies combined to build websites that look strong and work properly.</p>
-            </div>
-
-            <div class="skills-tabs">
-                <button class="tab-btn active" data-tab="frontend">Frontend</button>
-                <button class="tab-btn" data-tab="backend">Backend</button>
-                <button class="tab-btn" data-tab="all">All Skills</button>
-            </div>
-
-            <div class="skills-grid">
-                <div class="skill-category" data-category="frontend">
-                    <h3>Frontend Technologies</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">HTML5</span>
-                                <span class="skill-level">95%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 95%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">CSS3</span>
-                                <span class="skill-level">90%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 90%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">JavaScript</span>
-                                <span class="skill-level">88%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 88%;"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Responsive UI Design</span>
-                                <span class="skill-level">92%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 92%;"></div>
-                            </div>
-                        </div>
-                    </div>
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <p class="section-kicker">Projects</p>
+                    <h2>Proof That the Brand Can Be Built Right</h2>
                 </div>
 
-                <div class="skill-category" data-category="backend">
-                    <h3>Backend Languages &amp; Systems</h3>
-                    <div class="skill-list">
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Node.js</span>
-                                <span class="skill-level">82%</span>
+                <div class="projects-grid">
+                    <article class="project-card" data-reveal>
+                        <div class="placeholder-frame project-placeholder">
+                            <span class="placeholder-label">[ADD REAL SCREENSHOT]</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Restaurant Website with Admin Dashboard</h3>
+                            <p>A full-stack restaurant build designed to take orders, manage offers, handle updates from the back office, and position the brand like a serious player online.</p>
+                            <div class="tag-list">
+                                <span>Node.js</span>
+                                <span>MongoDB</span>
+                                <span>Paystack</span>
+                                <span>Pusher</span>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 82%;"></div>
+                            <div class="project-actions">
+                                <a href="#" class="project-btn project-btn-secondary is-disabled" data-disabled-link aria-disabled="true" title="Add your live project link here">View Live</a>
+                                <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+a+restaurant+website+like+this" target="_blank" rel="noreferrer" class="project-btn project-btn-primary">Build Something Like This &rarr;</a>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Express.js</span>
-                                <span class="skill-level">80%</span>
+                    </article>
+
+                    <article class="project-card" data-reveal>
+                        <div class="placeholder-frame project-placeholder">
+                            <span class="placeholder-label">[ADD REAL SCREENSHOT]</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Personal Portfolio - Lambo Code</h3>
+                            <p>A bold personal brand site built to look premium, control the story, collect project briefs, and move prospects from interest to contact fast.</p>
+                            <div class="tag-list">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                                <span>EmailJS</span>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%;"></div>
+                            <div class="project-actions">
+                                <a href="#" class="project-btn project-btn-secondary is-disabled" data-disabled-link aria-disabled="true" title="Add your live project link here">View Live</a>
+                                <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+a+portfolio+website+like+this" target="_blank" rel="noreferrer" class="project-btn project-btn-primary">Build Something Like This &rarr;</a>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">MongoDB</span>
-                                <span class="skill-level">78%</span>
+                    </article>
+
+                    <article class="project-card" data-reveal>
+                        <div class="placeholder-frame project-placeholder">
+                            <span class="placeholder-label">[ADD REAL SCREENSHOT]</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Car Rental Website</h3>
+                            <p>A clean rental website built to make vehicles easy to browse, bookings easy to start, and the business look trustworthy before the first phone call happens.</p>
+                            <div class="tag-list">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                                <span>Booking UI</span>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 78%;"></div>
+                            <div class="project-actions">
+                                <a href="#" class="project-btn project-btn-secondary is-disabled" data-disabled-link aria-disabled="true" title="Add your live project link here">View Live</a>
+                                <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+a+car+rental+website+like+this" target="_blank" rel="noreferrer" class="project-btn project-btn-primary">Build Something Like This &rarr;</a>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">REST API Integration</span>
-                                <span class="skill-level">80%</span>
+                    </article>
+
+                    <article class="project-card" data-reveal>
+                        <div class="placeholder-frame project-placeholder">
+                            <span class="placeholder-label">[ADD REAL SCREENSHOT]</span>
+                        </div>
+                        <div class="project-content">
+                            <h3>Barber Shop Website</h3>
+                            <p>A brand-first barber shop website built to sell style, trust, and appointment intent from the first scroll, not after endless explanation.</p>
+                            <div class="tag-list">
+                                <span>HTML</span>
+                                <span>CSS</span>
+                                <span>JS</span>
+                                <span>Brand Design</span>
                             </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 80%;"></div>
+                            <div class="project-actions">
+                                <a href="#" class="project-btn project-btn-secondary is-disabled" data-disabled-link aria-disabled="true" title="Add your live project link here">View Live</a>
+                                <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+a+barber+shop+website+like+this" target="_blank" rel="noreferrer" class="project-btn project-btn-primary">Build Something Like This &rarr;</a>
                             </div>
                         </div>
-                        <div class="skill-item">
-                            <div class="skill-header">
-                                <span class="skill-name">Admin Dashboard Development</span>
-                                <span class="skill-level">84%</span>
-                            </div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" style="width: 84%;"></div>
-                            </div>
-                        </div>
-                    </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects" class="projects">
-        <div class="container">
-            <div class="section-label">Featured Work</div>
-            <h2>Selected Projects</h2>
-            <p class="projects-note">A focused set of projects showing hospitality, personal branding, car rental, and barber shop website work.</p>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=800&h=500&fit=crop&q=80" alt="Restaurant website project" class="project-image">
-                    <div class="project-meta">
-                        <span class="project-label real">Full-Stack Project</span>
-                    </div>
-                    <h3>Restaurant Website with Admin Dashboard</h3>
-                    <p>A full-stack restaurant website with customer-facing pages, dynamic content management, and an admin dashboard for updating food items, offers, and site content.</p>
-                    <div class="tech-stack">
-                        <span>Node.js</span>
-                        <span>Express.js</span>
-                        <span>MongoDB</span>
-                        <span>Admin Dashboard</span>
-                    </div>
-                    <a href="#contact" class="project-link">Build something like this -&gt;</a>
+        <section id="services" class="services">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <p class="section-kicker">Services</p>
+                    <h2>What You Get When Lambo Code Builds for You</h2>
                 </div>
 
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=800&h=500&fit=crop&q=80" alt="Portfolio website project" class="project-image">
-                    <div class="project-meta">
-                        <span class="project-label personal">Personal Project</span>
-                    </div>
-                    <h3>Personal Portfolio Website</h3>
-                    <p>This portfolio showcases my design direction, responsive layout work, backend-aware positioning, and direct contact flow with email and WhatsApp integration.</p>
-                    <div class="tech-stack">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>EmailJS</span>
-                    </div>
-                    <a href="#contact" class="project-link">Create a portfolio like this -&gt;</a>
-                </div>
+                <div class="services-grid">
+                    <article class="service-card" data-reveal>
+                        <h3>A Restaurant Site That Sells the Experience and Takes Orders Seriously</h3>
+                        <p>You get a full-stack restaurant website that looks premium, accepts payments, and gives you dashboard-level control over what customers see. That means less chaos, faster updates, and a brand that looks built to win.</p>
+                        <div class="tag-list">
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Paystack</span>
+                        </div>
+                        <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+a+restaurant+website" target="_blank" rel="noreferrer" class="service-link">Start This Service</a>
+                        <p class="service-minimum">From &#8358;200,000</p>
+                    </article>
 
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&h=500&fit=crop&q=80" alt="Car rental website project" class="project-image">
-                    <div class="project-meta">
-                        <span class="project-label featured">Featured Project</span>
-                    </div>
-                    <h3>Car Rental Website</h3>
-                    <p>A clean vehicle rental website focused on available cars, service highlights, booking calls to action, and a polished customer-friendly browsing experience.</p>
-                    <div class="tech-stack">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Booking UI</span>
-                    </div>
-                    <a href="#contact" class="project-link">Launch a car rental site -&gt;</a>
-                </div>
+                    <article class="service-card" data-reveal>
+                        <h3>A Website That Makes Your Brand Look Expensive and Trustworthy</h3>
+                        <p>You get a sharp digital presence that tells the right story fast, gives visitors confidence, and moves them toward inquiry without confusion. It is the kind of website that makes your business look ready for bigger clients.</p>
+                        <div class="tag-list">
+                            <span>Brand UI</span>
+                            <span>Responsive</span>
+                            <span>Conversion Copy</span>
+                        </div>
+                        <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+a+business+website" target="_blank" rel="noreferrer" class="service-link">Start This Service</a>
+                        <p class="service-minimum">From &#8358;200,000</p>
+                    </article>
 
-                <div class="project-card">
-                    <img src="https://images.unsplash.com/photo-1517832606299-7ae9b720a186?w=800&h=500&fit=crop&q=80" alt="Barber shop website project" class="project-image">
-                    <div class="project-meta">
-                        <span class="project-label featured">Featured Project</span>
-                    </div>
-                    <h3>Barber Shop Website</h3>
-                    <p>A stylish barber shop website with service sections, team presentation, gallery space, and strong booking or contact prompts for local clients.</p>
-                    <div class="tech-stack">
-                        <span>HTML5</span>
-                        <span>CSS3</span>
-                        <span>JavaScript</span>
-                        <span>Brand Design</span>
-                    </div>
-                    <a href="#contact" class="project-link">Build a barber shop site -&gt;</a>
+                    <article class="service-card" data-reveal>
+                        <h3>A Car Rental Site That Makes Booking Feel Simple and Premium</h3>
+                        <p>You get a booking-focused website that presents your fleet clearly, builds trust instantly, and gives customers an easy path to take action. The result is a cleaner operation and a stronger first impression.</p>
+                        <div class="tag-list">
+                            <span>Booking UI</span>
+                            <span>Rental Flow</span>
+                            <span>JS</span>
+                        </div>
+                        <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+a+car+rental+website" target="_blank" rel="noreferrer" class="service-link">Start This Service</a>
+                        <p class="service-minimum">From &#8358;200,000</p>
+                    </article>
+
+                    <article class="service-card" data-reveal>
+                        <h3>A Barber Shop Site That Sells Style Before the Appointment</h3>
+                        <p>You get a bold local-business website that puts your image, services, and booking intent in front of the right people fast. It helps the brand look polished, current, and ready for more walk-ins and bookings.</p>
+                        <div class="tag-list">
+                            <span>Brand Design</span>
+                            <span>Local Business</span>
+                            <span>Responsive</span>
+                        </div>
+                        <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+a+barber+shop+website" target="_blank" rel="noreferrer" class="service-link">Start This Service</a>
+                        <p class="service-minimum">From &#8358;200,000</p>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="services" class="services">
-        <div class="container">
-            <div class="section-label">What I Offer</div>
-            <h2>Services I Offer</h2>
-            <p class="services-intro">My focus is on professional, responsive websites that present your business clearly and help visitors take action.</p>
-            <div class="services-wrapper">
-                <div class="service-item">
-                    <div class="service-header">
-                        <div class="service-number">01</div>
-                        <div class="service-icon-box">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
-                                <line x1="2" y1="20" x2="22" y2="20"></line>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3>Full-Stack Restaurant Websites</h3>
-                    <p>I build restaurant websites with polished customer pages, backend data flow, and admin dashboard features for managing offers, menus, and updates.</p>
-                    <div class="service-tech">
-                        <span>Node.js</span>
-                        <span>MongoDB</span>
-                        <span>Dashboard</span>
-                    </div>
+        <section id="process" class="process">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <p class="section-kicker">Process</p>
+                    <h2>How We Move From Idea to Launch</h2>
                 </div>
 
-                <div class="service-item">
-                    <div class="service-header">
-                        <div class="service-number">02</div>
-                        <div class="service-icon-box">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M4 7h16M4 12h10M4 17h7"></path>
-                                <rect x="3" y="4" width="18" height="16" rx="2"></rect>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3>Portfolio and Brand Websites</h3>
-                    <p>I create strong portfolio and brand websites that feel modern, responsive, and professional across desktop, tablet, and mobile devices.</p>
-                    <div class="service-tech">
-                        <span>Portfolio Sites</span>
-                        <span>Personal Branding</span>
-                        <span>Responsive UI</span>
-                    </div>
+                <div class="process-grid">
+                    <article class="step-card" data-reveal>
+                        <span class="step-number">01</span>
+                        <h3>Free Consultation</h3>
+                        <p>We talk about your business and goals.</p>
+                    </article>
+
+                    <article class="step-card" data-reveal>
+                        <span class="step-number">02</span>
+                        <h3>Design &amp; Build</h3>
+                        <p>I build your full website to spec.</p>
+                    </article>
+
+                    <article class="step-card" data-reveal>
+                        <span class="step-number">03</span>
+                        <h3>Review &amp; Approve</h3>
+                        <p>You review everything before we go live.</p>
+                    </article>
+
+                    <article class="step-card" data-reveal>
+                        <span class="step-number">04</span>
+                        <h3>Launch &amp; Support</h3>
+                        <p>Site goes live, I stay available.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-heading" data-reveal>
+                    <p class="section-kicker">Contact</p>
+                    <h2>Bring the Brief. I&apos;ll Bring the Build.</h2>
                 </div>
 
-                <div class="service-item">
-                    <div class="service-header">
-                        <div class="service-number">03</div>
-                        <div class="service-icon-box">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 1v22"></path>
-                                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7H14.5a3.5 3.5 0 0 1 0 7H6"></path>
-                            </svg>
+                <div class="contact-layout">
+                    <div class="contact-panel" data-reveal>
+                        <div class="contact-item">
+                            <div class="contact-item-head">
+                                <span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-envelope"></i></span>
+                                <p class="contact-label">Email</p>
+                            </div>
+                            <a href="mailto:isaiahomoruyi4@gmail.com">isaiahomoruyi4@gmail.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-head">
+                                <span class="contact-icon" aria-hidden="true"><i class="fa-brands fa-whatsapp"></i></span>
+                                <p class="contact-label">WhatsApp</p>
+                            </div>
+                            <a href="https://wa.me/2349157632360" target="_blank" rel="noreferrer">Chat on WhatsApp</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-head">
+                                <span class="contact-icon" aria-hidden="true"><i class="fa-brands fa-tiktok"></i></span>
+                                <p class="contact-label">TikTok</p>
+                            </div>
+                            <a href="https://www.tiktok.com/@codelambo" target="_blank" rel="noreferrer">@codelambo</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-head">
+                                <span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-phone"></i></span>
+                                <p class="contact-label">Phone</p>
+                            </div>
+                            <a href="tel:+2349157632360">09157632360</a>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-item-head">
+                                <span class="contact-icon" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></span>
+                                <p class="contact-label">Location</p>
+                            </div>
+                            <span>Benin City, Nigeria</span>
                         </div>
                     </div>
-                    <h3>Car Rental and Booking Websites</h3>
-                    <p>I design clean booking-focused interfaces for car rental brands and service businesses, with clear calls to action and easy-to-scan layouts.</p>
-                    <div class="service-tech">
-                        <span>Booking UI</span>
-                        <span>Rental Pages</span>
-                        <span>Responsive</span>
-                    </div>
-                </div>
 
-                <div class="service-item">
-                    <div class="service-header">
-                        <div class="service-number">04</div>
-                        <div class="service-icon-box">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-                                <circle cx="12" cy="10" r="3"></circle>
-                            </svg>
-                        </div>
-                    </div>
-                    <h3>Barber Shop Websites and Redesigns</h3>
-                    <p>I redesign local business sites and build stylish barber shop pages with service lists, galleries, branding, and direct contact integration.</p>
-                    <div class="service-tech">
-                        <span>Brand Styling</span>
-                        <span>Contact Flow</span>
-                        <span>Redesign</span>
+                    <div class="contact-form-wrap" data-reveal>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-group">
+                                <label for="user_name">Full Name</label>
+                                <input type="text" id="user_name" name="user_name" placeholder="Your full name" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="user_email">Email</label>
+                                <input type="email" id="user_email" name="user_email" placeholder="your@email.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="user_phone">Phone</label>
+                                <input type="tel" id="user_phone" name="user_phone" placeholder="+234..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="subject">Project Type</label>
+                                <input type="text" id="subject" name="subject" placeholder="Restaurant, portfolio, car rental..." required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="message">Project Details</label>
+                                <textarea id="message" name="message" rows="7" placeholder="Tell me what you want built, what pages you need, and what the business goal is." required></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary btn-full">Send Brief</button>
+                            <p class="contact-note">Submitting sends your brief to my email and opens WhatsApp for fast follow-up</p>
+                            <div id="formMessage" aria-live="polite"></div>
+                        </form>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-header">
-                <div class="section-label">Contact Me</div>
-                <h2>Let&apos;s Build Your Next Website</h2>
-                <p class="contact-subtitle">If you need a restaurant website, portfolio, car rental site, barber shop website, or a business redesign, send your brief here and I&apos;ll receive it by email and WhatsApp.</p>
-            </div>
-
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-card">
-                        <div class="contact-card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <rect x="2" y="4" width="20" height="16" rx="2"></rect>
-                                <path d="M22 4l-10 7L2 4"></path>
-                            </svg>
-                        </div>
-                        <h3>Email</h3>
-                        <p><a href="mailto:isaiahomoruyi4@gmail.com">isaiahomoruyi4@gmail.com</a></p>
-                    </div>
-
-                    <div class="contact-card">
-                        <div class="contact-card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
-                            </svg>
-                        </div>
-                        <h3>WhatsApp</h3>
-                        <p><a href="https://wa.me/2349157632360" target="_blank" rel="noreferrer">Chat on WhatsApp</a></p>
-                    </div>
-
-                    <div class="contact-card">
-                        <div class="contact-card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
-                            </svg>
-                        </div>
-                        <h3>Phone</h3>
-                        <p><a href="tel:+2349157632360">09157632360</a></p>
-                    </div>
-
-                    <div class="contact-card">
-                        <div class="contact-card-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                <path d="M12 20h9"></path>
-                                <path d="M12 4h9"></path>
-                                <path d="M4 9h16"></path>
-                                <path d="M4 15h16"></path>
-                            </svg>
-                        </div>
-                        <h3>Best For</h3>
-                        <p>Full-stack restaurant websites, portfolio sites, car rental pages, barber shop websites, and responsive redesigns.</p>
-                    </div>
-                </div>
-
-                <div class="contact-form-wrapper">
-                    <form class="contact-form" id="contactForm">
-                        <div class="form-group">
-                            <label for="user_name">Full Name</label>
-                            <input type="text" id="user_name" name="user_name" placeholder="John Doe" required>
-                            <div class="form-line"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="user_email">Email Address</label>
-                            <input type="email" id="user_email" name="user_email" placeholder="john@example.com" required>
-                            <div class="form-line"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="user_phone">Phone Number</label>
-                            <input type="tel" id="user_phone" name="user_phone" placeholder="+234..." required>
-                            <div class="form-line"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="subject">Project Type</label>
-                            <input type="text" id="subject" name="subject" placeholder="Restaurant dashboard, portfolio, car rental, barber shop..." required>
-                            <div class="form-line"></div>
-                        </div>
-
-                        <div class="form-group">
-                            <label for="message">Project Details</label>
-                            <textarea id="message" name="message" placeholder="Tell me what you want to build, the pages you need, and any special features." rows="7" required></textarea>
-                            <div class="form-line"></div>
-                        </div>
-
-                        <button type="submit" class="btn btn-primary btn-large">Send Project Brief</button>
-                        <p class="contact-form-helper">Submitting this form sends your details to my email and opens WhatsApp with the same message prepared for fast follow-up.</p>
-                        <div id="formMessage" aria-live="polite"></div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-top">
-                <div class="footer-cta">
-                    <h3>Need a Website for Your Business?</h3>
-                    <p>I can help you create a professional full-stack restaurant website, portfolio, car rental page, or barber shop website.</p>
-                    <a href="#contact" class="cta-button">Get In Touch</a>
+        <div class="container footer-layout">
+            <div class="footer-brand">
+                <a href="#home" class="brand-mark footer-brand-mark">
+                    <span class="brand-bracket">&lt;/</span>
+                    <span class="brand-text">Lambo Code</span>
+                    <span class="brand-bracket">&gt;</span>
+                </a>
+                <p class="footer-tagline">Full-stack web developer. Benin City, Nigeria.</p>
+                <p class="footer-credit">Built by Omoruyi Isaiah</p>
+                <div class="footer-socials">
+                    <a href="https://wa.me/2349157632360" target="_blank" rel="noreferrer" class="footer-social-link" aria-label="Chat with Lambo Code on WhatsApp">
+                        <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                    <a href="mailto:isaiahomoruyi4@gmail.com" class="footer-social-link" aria-label="Email Lambo Code">
+                        <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+                        <span>Email</span>
+                    </a>
+                    <a href="https://www.tiktok.com/@codelambo" target="_blank" rel="noreferrer" class="footer-social-link" aria-label="Visit Code Lambo on TikTok">
+                        <i class="fa-brands fa-tiktok" aria-hidden="true"></i>
+                        <span>Code Lambo</span>
+                    </a>
+                </div>
+                <div class="status-pill">
+                    <span class="status-dot"></span>
+                    <span>Available for new projects</span>
                 </div>
             </div>
 
-            <div class="footer-main">
-                <div class="footer-brand">
-                    <div class="footer-logo">
-                        <span class="logo-icon">&lt;/&gt;</span>
-                        <span>Omoruyi Isaiah</span>
-                    </div>
-                    <p>Full-stack website developer focused on responsive design, backend workflows, admin dashboards, and client-friendly website experiences.</p>
-                    <div class="footer-social">
-                        <a href="mailto:isaiahomoruyi4@gmail.com" target="_blank" rel="noreferrer" title="Email" class="social-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"></path>
-                            </svg>
-                        </a>
-                        <a href="https://wa.me/2349157632360" target="_blank" rel="noreferrer" title="WhatsApp" class="social-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M4.9 19.1 6 15.2a8 8 0 1 1 3 2.9l-4.1 1zm4.5-2.2.3.2a6.5 6.5 0 1 0-2.2-2.1l.2.3-.6 2.2 2.3-.6zm3.8-.8c-1.8 0-3.6-1.4-4.3-3.2-.3-.7-.2-1.3.1-1.7l.6-.7c.2-.2.2-.5.1-.7l-.6-1.4c-.1-.3-.5-.5-.8-.3-.3.2-.9.7-1.1 1.5-.2.8 0 1.8.8 3 .9 1.7 2.5 3.1 4.2 3.9 1.2.6 2.2.8 3 .6.8-.2 1.3-.8 1.5-1.1.2-.3 0-.7-.3-.8l-1.4-.6c-.2-.1-.5 0-.7.1l-.7.6c-.3.2-.8.3-1.3.3z"></path>
-                            </svg>
-                        </a>
-                        <a href="tel:+2349157632360" title="Phone" class="social-icon">
-                            <svg viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M6.6 10.8a15.5 15.5 0 0 0 6.6 6.6l2.2-2.2c.3-.3.8-.4 1.2-.3 1 .3 2 .5 3 .5.7 0 1.2.5 1.2 1.2V20c0 .7-.5 1.2-1.2 1.2C10.5 21.2 2.8 13.5 2.8 4.4 2.8 3.7 3.3 3.2 4 3.2h3.3c.7 0 1.2.5 1.2 1.2 0 1 .2 2 .5 3 .1.4 0 .9-.3 1.2l-2.1 2.2z"></path>
-                            </svg>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About Me</a></li>
-                        <li><a href="#projects">Projects</a></li>
-                        <li><a href="#skills">Skills</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#services">Restaurant Websites</a></li>
-                        <li><a href="#services">Portfolio Websites</a></li>
-                        <li><a href="#services">Car Rental Websites</a></li>
-                        <li><a href="#services">Barber Shop Websites</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:isaiahomoruyi4@gmail.com">isaiahomoruyi4@gmail.com</a></li>
-                        <li><a href="tel:+2349157632360">09157632360</a></li>
-                        <li><a href="https://wa.me/2349157632360" target="_blank" rel="noreferrer">WhatsApp Chat</a></li>
-                        <li><span>Nigeria</span></li>
-                    </ul>
-                </div>
+            <div class="footer-links">
+                <h4 class="footer-heading"><i class="fa-solid fa-compass" aria-hidden="true"></i><span>Quick Links</span></h4>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#process">Process</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
             </div>
 
-            <div class="footer-bottom">
-                <div class="footer-divider"></div>
-                <div class="footer-credits">
-                    <p>&copy; 2026 Omoruyi Isaiah. All rights reserved.</p>
-                    <p>Designed and developed as a full-stack portfolio website.</p>
-                </div>
+            <div class="footer-links">
+                <h4 class="footer-heading"><i class="fa-solid fa-layer-group" aria-hidden="true"></i><span>Services</span></h4>
+                <ul>
+                    <li><a href="#services">Restaurant Websites</a></li>
+                    <li><a href="#services">Brand Websites</a></li>
+                    <li><a href="#services">Car Rental Sites</a></li>
+                    <li><a href="#services">Barber Shop Sites</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-links">
+                <h4 class="footer-heading"><i class="fa-solid fa-address-card" aria-hidden="true"></i><span>Contact</span></h4>
+                <ul>
+                    <li><a href="mailto:isaiahomoruyi4@gmail.com" class="footer-link-inline"><i class="fa-solid fa-envelope" aria-hidden="true"></i><span>isaiahomoruyi4@gmail.com</span></a></li>
+                    <li><a href="https://wa.me/2349157632360" target="_blank" rel="noreferrer" class="footer-link-inline"><i class="fa-brands fa-whatsapp" aria-hidden="true"></i><span>WhatsApp</span></a></li>
+                    <li><a href="https://www.tiktok.com/@codelambo" target="_blank" rel="noreferrer" class="footer-link-inline"><i class="fa-brands fa-tiktok" aria-hidden="true"></i><span>@codelambo</span></a></li>
+                    <li><a href="tel:+2349157632360" class="footer-link-inline"><i class="fa-solid fa-phone" aria-hidden="true"></i><span>09157632360</span></a></li>
+                    <li><span class="footer-link-inline"><i class="fa-solid fa-location-dot" aria-hidden="true"></i><span>Benin City, Nigeria</span></span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 Lambo Code by Omoruyi Isaiah. All rights reserved.</p>
             </div>
         </div>
     </footer>
