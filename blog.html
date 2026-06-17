@@ -52,6 +52,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..60,400;12..60,600;12..60,700;12..60,800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="chatbot.css">
 
 <style>
 /* ─── RESET & ROOT ──────────────────────────────────── */
@@ -633,9 +634,9 @@ footer{
   <div class="article-grid">
 
     <!-- CARD 1 -->
-    <div class="article-card rv" onclick="openArticle('article1')">
-      <div class="article-card-img">
-        <i class="fa-solid fa-code"></i>
+    <a href="blog/best-web-developer-benin-city.html" class="article-card rv" style="text-decoration: none; cursor: pointer;">
+      <div class="article-card-img" style="background-image: url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=1200'); background-size: cover; background-position: center;">
+        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.4);"></div>
         <div class="article-card-num">01</div>
       </div>
       <div class="article-card-body">
@@ -643,16 +644,16 @@ footer{
           <span class="article-tag">Web Development</span>
           <span class="article-read-time"><i class="fa-solid fa-clock"></i> 5 min read</span>
         </div>
-        <h3>The Best Web Developer in Benin City, Nigeria — What to Look For (And Where to Find One)</h3>
+        <h3 style="color: var(--tx);">The Best Web Developer in Benin City, Nigeria — What to Look For (And Where to Find One)</h3>
         <p>Not every developer delivers the same quality. Here's exactly what separates a great web developer from an average one — and why more Nigerian businesses are turning to Lambo Code.</p>
-        <button class="article-read-link">Read Article <i class="fa-solid fa-arrow-right"></i></button>
+        <span class="article-read-link" style="color: var(--or);">Read Article <i class="fa-solid fa-arrow-right"></i></span>
       </div>
-    </div>
+    </a>
 
     <!-- CARD 2 -->
-    <div class="article-card rv d1" onclick="openArticle('article2')">
-      <div class="article-card-img">
-        <i class="fa-solid fa-utensils"></i>
+    <a href="blog/restaurant-website-cost-nigeria.html" class="article-card rv d1" style="text-decoration: none; cursor: pointer;">
+      <div class="article-card-img" style="background-image: url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?w=1200'); background-size: cover; background-position: center;">
+        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.4);"></div>
         <div class="article-card-num">02</div>
       </div>
       <div class="article-card-body">
@@ -660,16 +661,16 @@ footer{
           <span class="article-tag">Pricing Guide</span>
           <span class="article-read-time"><i class="fa-solid fa-clock"></i> 4 min read</span>
         </div>
-        <h3>How Much Does a Restaurant Website Cost in Nigeria? (2026 Guide)</h3>
+        <h3 style="color: var(--tx);">How Much Does a Restaurant Website Cost in Nigeria? (2026 Guide)</h3>
         <p>If you own a restaurant, bar, or food business in Nigeria and you're wondering what a professional website costs — this honest guide breaks it all down for you.</p>
-        <button class="article-read-link">Read Article <i class="fa-solid fa-arrow-right"></i></button>
+        <span class="article-read-link" style="color: var(--or);">Read Article <i class="fa-solid fa-arrow-right"></i></span>
       </div>
-    </div>
+    </a>
 
     <!-- CARD 3 -->
-    <div class="article-card rv d2" onclick="openArticle('article3')">
-      <div class="article-card-img">
-        <i class="fa-solid fa-trophy"></i>
+    <a href="blog/what-to-look-for-in-a-nigerian-web-developer-2026.html" class="article-card rv d2" style="text-decoration: none; cursor: pointer;">
+      <div class="article-card-img" style="background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?w=1200'); background-size: cover; background-position: center;">
+        <div style="position: absolute; inset: 0; background: rgba(0,0,0,0.4);"></div>
         <div class="article-card-num">03</div>
       </div>
       <div class="article-card-body">
@@ -677,11 +678,11 @@ footer{
           <span class="article-tag">Nigeria Tech</span>
           <span class="article-read-time"><i class="fa-solid fa-clock"></i> 6 min read</span>
         </div>
-        <h3>Top Web Developers in Nigeria (2026) — Who's Actually Delivering Results?</h3>
-        <p>Nigeria's tech scene is booming. But how do you know who's actually delivering results for real businesses? This article breaks down what makes a developer stand out in 2026.</p>
-        <button class="article-read-link">Read Article <i class="fa-solid fa-arrow-right"></i></button>
+        <h3 style="color: var(--tx);">What to Look for in a Nigerian Web Developer in 2026</h3>
+        <p>Nigeria's tech scene is booming. But how do you know who's actually delivering results for real businesses? This guide covers everything you need to know.</p>
+        <span class="article-read-link" style="color: var(--or);">Read Article <i class="fa-solid fa-arrow-right"></i></span>
       </div>
-    </div>
+    </a>
 
   </div>
 </section>
@@ -878,7 +879,7 @@ footer{
       <div class="author-avatar"><i class="fa-solid fa-code"></i></div>
       <div class="author-info">
         <h4>Omoruyi Isaiah — Lambo Code</h4>
-        <p>Full-stack web developer based in Benin City, Nigeria. Building premium websites for restaurants, businesses, car rentals, and brands across Nigeria and worldwide.<br>🌐 portfolio-beta-lyart-94.vercel.app · 📩 isaiahomoruyi4@gmail.com · WhatsApp: +234 915 763 2360 · TikTok: @codelambo</p>
+        <p>Full-stack web developer based in Benin City, Nigeria. Building premium websites for restaurants, businesses, car rentals, and brands across Nigeria and worldwide.<br>🌐 portfolio-beta-lyart-94.vercel.app · 📩 isaiahomoruyi4@gmail.com · WhatsApp: +234 915 763 2360 · TikTok: @omoruyi.isaiah</p>
       </div>
     </div>
   </div>
@@ -917,7 +918,8 @@ footer{
       <div class="foot-social">
         <a href="https://wa.me/2349157632360" class="fs-btn" target="_blank" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
         <a href="mailto:isaiahomoruyi4@gmail.com" class="fs-btn" title="Email"><i class="fa-solid fa-envelope"></i></a>
-        <a href="https://www.tiktok.com/@codelambo" target="_blank" class="fs-btn" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://www.tiktok.com/@omoruyi.isaiah" class="fs-btn" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+        <a href="https://linkedin.com/in/omoruyi-isaiah" class="fs-btn" title="LinkedIn" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
       </div>
     </div>
     <div class="foot-col">
@@ -946,7 +948,8 @@ footer{
         <li><a href="mailto:isaiahomoruyi4@gmail.com"><i class="fa-solid fa-envelope"></i>isaiahomoruyi4@gmail.com</a></li>
         <li><a href="https://wa.me/2349157632360" target="_blank"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a></li>
         <li><a href="tel:+2349157632360"><i class="fa-solid fa-phone"></i>09157632360</a></li>
-        <li><a href="https://www.tiktok.com/@codelambo" target="_blank"><i class="fa-brands fa-tiktok"></i>@codelambo</a></li>
+        <li><a href="https://www.tiktok.com/@omoruyi.isaiah" target="_blank"><i class="fa-brands fa-tiktok"></i>@omoruyi.isaiah</a></li>
+        <li><a href="https://linkedin.com/in/omoruyi-isaiah" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a></li>
       </ul>
     </div>
   </div>
@@ -1045,5 +1048,43 @@ function closeArticle(id) {
   }, 100);
 }
 </script>
+
+<!-- AI CHATBOT WIDGET -->
+<div id="chatbotContainer" class="chatbot-container">
+  <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open AI Chat">
+    <span class="chatbot-icon">
+      <img src="logo.png" alt="Logo" />
+    </span>
+    <span class="chatbot-dot"></span>
+  </button>
+  <div id="chatbotWindow" class="chatbot-window">
+    <div class="chatbot-header">
+      <div class="chatbot-header-content">
+        <h3>Lambo AI Assistant</h3>
+        <p class="chatbot-status">Always here to help</p>
+      </div>
+      <button id="closeChatbot" class="chatbot-close" aria-label="Close chat">
+        <i class="fas fa-times"></i>
+      </button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="chatbot-message bot-message">
+        <div class="message-content">
+          <p>Hi! I'm Lambo, your AI assistant for Lambo Code. I can help answer questions about web development services, pricing, and hiring Omoruyi. How can I help you today?</p>
+        </div>
+      </div>
+    </div>
+    <div class="chatbot-input-area">
+      <form id="chatbotForm" class="chatbot-form">
+        <input type="text" id="chatbotInput" placeholder="Ask about Lambo Code services..." autocomplete="off" />
+        <button type="submit" class="chatbot-send" aria-label="Send message">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<script src="chatbot.js"></script>
 </body>
 </html>
