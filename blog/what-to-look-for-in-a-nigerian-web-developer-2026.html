@@ -634,8 +634,10 @@ footer{
     <li><a href="../index.html">Home</a></li>
     <li><a href="../index.html#about">About</a></li>
     <li><a href="../index.html#projects">Work</a></li>
+    <li><a href="../index.html#achievements">Achievements</a></li>
+    <li><a href="../index.html#recent-intel" class="active">Blog</a></li>
     <li><a href="../index.html#services">Services</a></li>
-    <li><a href="../blog.html" class="active">Blog</a></li>
+    <li><a href="../index.html#process">Process</a></li>
     <li><a href="../index.html#contact">Contact</a></li>
   </ul>
   <div class="nav-actions">
@@ -652,8 +654,10 @@ footer{
   <a href="../index.html" onclick="closeMob()"><i class="fa-solid fa-house" style="color:var(--or);margin-right:8px"></i>Home</a>
   <a href="../index.html#about" onclick="closeMob()"><i class="fa-solid fa-user" style="color:var(--or);margin-right:8px"></i>About</a>
   <a href="../index.html#projects" onclick="closeMob()"><i class="fa-solid fa-briefcase" style="color:var(--or);margin-right:8px"></i>Work</a>
+  <a href="../index.html#achievements" onclick="closeMob()"><i class="fa-solid fa-trophy" style="color:var(--or);margin-right:8px"></i>Achievements</a>
+  <a href="../index.html#recent-intel" onclick="closeMob()" style="color:var(--or)"><i class="fa-solid fa-lightbulb" style="margin-right:8px"></i>Blog</a>
   <a href="../index.html#services" onclick="closeMob()"><i class="fa-solid fa-gears" style="color:var(--or);margin-right:8px"></i>Services</a>
-  <a href="../blog.html" onclick="closeMob()" style="color:var(--or)"><i class="fa-solid fa-newspaper" style="margin-right:8px"></i>Blog</a>
+  <a href="../index.html#process" onclick="closeMob()"><i class="fa-solid fa-route" style="color:var(--or);margin-right:8px"></i>Process</a>
   <a href="../index.html#contact" onclick="closeMob()"><i class="fa-solid fa-paper-plane" style="color:var(--or);margin-right:8px"></i>Contact</a>
   <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+to+start+a+project" target="_blank" style="color:var(--or);font-weight:700">
     <i class="fa-brands fa-whatsapp" style="margin-right:8px"></i>Start a Project →
@@ -769,6 +773,27 @@ footer{
         <h4>Omoruyi Isaiah — Lambo Code</h4>
         <p>Full-stack web developer based in Benin City, Nigeria. Building premium websites for restaurants, businesses, car rentals, and brands across Nigeria and worldwide.<br>📩 isaiahomoruyi4@gmail.com · WhatsApp: +234 915 763 2360</p>
       </div>
+    </div>
+
+    <!-- COMMENTS SECTION -->
+    <div class="comments-section">
+      <h3 class="comments-title"><i class="fa-solid fa-comments" style="color:var(--or);margin-right:10px;"></i>Comments</h3>
+      <form class="comment-form" onsubmit="submitComment(event, 'what-to-look-for-in-a-nigerian-web-developer-2026')">
+        <div class="comment-form-row">
+          <div class="comment-form-group">
+            <label><i class="fa-solid fa-user"></i>Your Name</label>
+            <input type="text" id="what-to-look-for-in-a-nigerian-web-developer-2026-name" placeholder="Enter your name" required>
+          </div>
+        </div>
+        <div class="comment-form-group">
+          <label><i class="fa-solid fa-comment"></i>Your Comment</label>
+          <textarea id="what-to-look-for-in-a-nigerian-web-developer-2026-text" placeholder="Write your comment here..." required></textarea>
+        </div>
+        <button type="submit" class="btn-submit-comment">
+          <i class="fa-solid fa-paper-plane"></i>Submit Comment
+        </button>
+      </form>
+      <div id="what-to-look-for-in-a-nigerian-web-developer-2026-comments" class="comments-list"></div>
     </div>
   </div>
 </section>

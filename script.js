@@ -130,6 +130,107 @@ const setFormMessage = (message, color) => {
     formMessage.style.color = color;
 };
 
+const getCommentsKey = (articleId) => `lambo-comments-${articleId}`;
+
+const escapeHtml = (text) => {
+    const div = document.createElement("div");
+    div.textContent = text;
+    return div.innerHTML;
+};
+
+const renderComments = (container, comments) => {
+    if (!container) {
+        return;
+    }
+
+    if (!comments.length) {
+        container.innerHTML = `
+            <div class="no-comments">
+                <i class="fa-solid fa-comments"></i>
+                <p>No comments yet. Be the first to share your thoughts!</p>
+            </div>
+        `;
+        return;
+    }
+
+    container.innerHTML = comments.map((comment) => `
+        <div class="comment-item">
+            <div class="comment-header">
+                <div class="comment-author">
+                    <div class="comment-avatar">${escapeHtml(comment.name.charAt(0).toUpperCase())}</div>
+                    <div class="comment-author-info">
+                        <h4 class="comment-author-name">${escapeHtml(comment.name)}</h4>
+                        <p class="comment-date">${new Date(comment.date).toLocaleString()}</p>
+                    </div>
+                </div>
+            </div>
+            <p class="comment-text">${escapeHtml(comment.text)}</p>
+        </div>
+    `).join("");
+};
+
+const loadComments = (articleId) => {
+    const commentsList = document.getElementById(`${articleId}-comments`);
+    if (!commentsList) {
+        return;
+    }
+
+    const comments = JSON.parse(window.localStorage.getItem(getCommentsKey(articleId)) || "[]");
+    renderComments(commentsList, comments);
+};
+
+const initializeComments = () => {
+    document.querySelectorAll('[id$="-comments"]').forEach((container) => {
+        const articleId = container.id.replace(/-comments$/, "");
+        loadComments(articleId);
+    });
+};
+
+const submitComment = (event, articleId) => {
+    event.preventDefault();
+    const nameInput = document.getElementById(`${articleId}-name`);
+    const textInput = document.getElementById(`${articleId}-text`);
+    if (!nameInput || !textInput) {
+        return;
+    }
+
+    const submitBtn = event.target.querySelector('.btn-submit-comment');
+    const name = nameInput.value.trim();
+    const text = textInput.value.trim();
+    if (!name || !text) {
+        return;
+    }
+
+    if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Submitting...';
+    }
+
+    setTimeout(() => {
+        const commentsKey = getCommentsKey(articleId);
+        const comments = JSON.parse(window.localStorage.getItem(commentsKey) || "[]");
+        comments.unshift({
+            name,
+            text,
+            date: new Date().toISOString()
+        });
+        window.localStorage.setItem(commentsKey, JSON.stringify(comments));
+        loadComments(articleId);
+        nameInput.value = "";
+        textInput.value = "";
+
+        if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fa-solid fa-check"></i> Submitted!';
+            setTimeout(() => {
+                submitBtn.innerHTML = '<i class="fa-solid fa-paper-plane"></i> Submit Comment';
+            }, 1500);
+        }
+    }, 600);
+};
+
+initializeComments();
+
 const buildWhatsappMessage = ({ userName, userEmail, userPhone, subject, message }) => [
     "Hello Lambo Code,",
     `My name is ${userName}.`,
