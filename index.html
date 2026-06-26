@@ -1336,7 +1336,56 @@ footer{
   .hero-image-container{max-width:240px}
 }
 
-/* ─── HERO VIDEO & ENHANCEMENTS ─────────────────────── */
+/* Milestones Section Styling */
+.milestone-card{
+  overflow:hidden !important;
+  transition:all var(--tr);
+  position:relative;
+  display:flex;flex-direction:column;height:100%;
+}
+.milestone-card:hover{
+  transform:translateY(-8px);
+  border-color:var(--or);
+  box-shadow:0 20px 60px var(--shadow);
+}
+.milestone-image-wrapper{
+  position:relative;width:100%;height:200px;overflow:hidden;background:var(--bg3);
+}
+.milestone-img{
+  width:100%;height:100%;object-fit:cover;display:block;
+  transition:transform .5s cubic-bezier(.4,0,.2,1);
+  animation:imgLoad .8s ease forwards;
+}
+.milestone-card:hover .milestone-img{
+  transform:scale(1.08);
+}
+@keyframes imgLoad{
+  from{opacity:0;filter:blur(8px)}
+  to{opacity:1;filter:blur(0)}
+}
+.milestone-overlay{
+  position:absolute;bottom:0;left:0;right:0;top:0;
+  background:linear-gradient(180deg,transparent 0%,rgba(8,14,20,.8) 60%);
+  display:flex;align-items:flex-end;padding:16px;
+  opacity:0;transition:opacity var(--tr);
+}
+.milestone-card:hover .milestone-overlay{
+  opacity:1;
+}
+
+/* Reduce milestone card entrance animation */
+.rv.milestone-card{
+  animation:fadeUp .25s ease both;
+}
+.rv.d1.milestone-card{
+  animation:fadeUp .25s .08s ease both;
+}
+.rv.d2.milestone-card{
+  animation:fadeUp .25s .16s ease both;
+}
+.rv.d3.milestone-card{
+  animation:fadeUp .25s .24s ease both;
+}
 #home{isolation:isolate;overflow:hidden}
 body{overflow-x:hidden}
 
@@ -1832,7 +1881,6 @@ footer{
         <span class="skill-badge"><i class="fa-solid fa-credit-card"></i> Paystack</span>
         <span class="skill-badge"><i class="fa-brands fa-js"></i> JavaScript</span>
         <span class="skill-badge"><i class="fa-solid fa-bolt"></i> Socket.IO</span>
-        <span class="skill-badge"><i class="fa-brands fa-react"></i> React</span>
       </div>
       <div class="hero-stats">
         <div class="stat-item">
@@ -1868,7 +1916,7 @@ footer{
       <div class="photo-stack" id="photoStack">
         <div class="ps-layer"></div>
         <div class="ps-layer2"></div>
-        <img src="https://portfolio-beta-lyart-94.vercel.app/mee.png"
+        <img src="mee.png"
              alt="Omoruyi Isaiah — Lambo Code" class="ps-img"
              loading="lazy" crossorigin="anonymous">
         <div class="photo-badge">
@@ -2166,54 +2214,110 @@ footer{
     <h2 class="s-title">Real Projects. <span class="or">Real Impact</span></h2>
     <p class="s-sub">5+ Nigerian businesses now live online with production-ready websites</p>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;max-width:1200px;margin:0 auto">
-    <div class="rv" style="background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:28px;transition:all var(--tr)">
-      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
-        <div style="width:56px;height:56px;border-radius:12px;background:var(--or-dim);display:flex;align-items:center;justify-content:center;border:1px solid var(--or)">
-          <i class="fa-solid fa-utensils" style="font-size:1.6rem;color:var(--or)"></i>
-        </div>
-        <div>
-          <h3 style="font-size:1.05rem;font-weight:700;margin:0">Chef P Kitchen</h3>
-          <p style="color:var(--tx2);font-size:.85rem;margin:0">Full-Stack Restaurant Site</p>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:28px;max-width:1200px;margin:0 auto">
+    <!-- Chef P Kitchen -->
+    <div class="rv milestone-card" style="background:var(--card);border:1px solid var(--bdr);border-radius:16px;overflow:hidden;transition:all var(--tr)">
+      <div class="milestone-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?w=400&h=250&fit=crop" alt="Chef P Kitchen" class="milestone-img" loading="lazy" decoding="async">
+        <div class="milestone-overlay">
+          <span style="background:linear-gradient(135deg,var(--or),var(--or2));color:#fff;padding:8px 16px;border-radius:20px;font-size:.8rem;font-weight:700">Paystack • Node.js</span>
         </div>
       </div>
-      <p style="color:var(--tx2);font-size:.9rem;line-height:1.6">Complete with Paystack payments, real-time order management, and admin dashboard for Benin City's premium kitchen.</p>
+      <div style="padding:24px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <div style="width:48px;height:48px;border-radius:12px;background:var(--or-dim);display:flex;align-items:center;justify-content:center;border:1px solid var(--or)">
+            <i class="fa-solid fa-utensils" style="font-size:1.4rem;color:var(--or)"></i>
+          </div>
+          <div>
+            <h3 style="font-size:1rem;font-weight:700;margin:0">Chef P Kitchen</h3>
+            <p style="color:var(--tx2);font-size:.8rem;margin:0">Restaurant Site</p>
+          </div>
+        </div>
+        <p style="color:var(--tx2);font-size:.9rem;line-height:1.6;margin-bottom:16px">Complete with Paystack payments, real-time order management, and admin dashboard for Benin City's premium kitchen.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span style="padding:5px 11px;border-radius:18px;background:rgba(240,122,26,.1);color:var(--or);font-size:.7rem;font-weight:600"><i class="fa-brands fa-node-js" style="margin-right:4px"></i>Node.js</span>
+          <span style="padding:5px 11px;border-radius:18px;background:rgba(240,122,26,.1);color:var(--or);font-size:.7rem;font-weight:600"><i class="fa-solid fa-database" style="margin-right:4px"></i>MongoDB</span>
+          <span style="padding:5px 11px;border-radius:18px;background:rgba(240,122,26,.1);color:var(--or);font-size:.7rem;font-weight:600"><i class="fa-solid fa-credit-card" style="margin-right:4px"></i>Paystack</span>
+        </div>
+      </div>
     </div>
-    <div class="rv d1" style="background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:28px;transition:all var(--tr)">
-      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
-        <div style="width:56px;height:56px;border-radius:12px;background:var(--or-dim);display:flex;align-items:center;justify-content:center;border:1px solid var(--or)">
-          <i class="fa-solid fa-scissors" style="font-size:1.6rem;color:var(--or)"></i>
-        </div>
-        <div>
-          <h3 style="font-size:1.05rem;font-weight:700;margin:0">Mega-Posh Barbers</h3>
-          <p style="color:var(--tx2);font-size:.85rem;margin:0">Brand-First Barbershop Site</p>
+    <!-- Mega-Posh Barbers -->
+    <div class="rv d1 milestone-card" style="background:var(--card);border:1px solid var(--bdr);border-radius:16px;overflow:hidden;transition:all var(--tr)">
+      <div class="milestone-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1585747860715-cd4628902046?w=400&h=250&fit=crop" alt="Mega-Posh Barbers" class="milestone-img" loading="lazy" decoding="async">
+        <div class="milestone-overlay">
+          <span style="background:linear-gradient(135deg,var(--or),var(--or2));color:#fff;padding:8px 16px;border-radius:20px;font-size:.8rem;font-weight:700">Branding • React</span>
         </div>
       </div>
-      <p style="color:var(--tx2);font-size:.9rem;line-height:1.6">Premium digital presence that establishes authority and drives walk-ins for this top Benin City barbershop.</p>
+      <div style="padding:24px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <div style="width:48px;height:48px;border-radius:12px;background:var(--or-dim);display:flex;align-items:center;justify-content:center;border:1px solid var(--or)">
+            <i class="fa-solid fa-scissors" style="font-size:1.4rem;color:var(--or)"></i>
+          </div>
+          <div>
+            <h3 style="font-size:1rem;font-weight:700;margin:0">Mega-Posh Barbers</h3>
+            <p style="color:var(--tx2);font-size:.8rem;margin:0">Barbershop Site</p>
+          </div>
+        </div>
+        <p style="color:var(--tx2);font-size:.9rem;line-height:1.6;margin-bottom:16px">Premium digital presence that establishes authority and drives walk-ins for this top Benin City barbershop.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span style="padding:5px 11px;border-radius:18px;background:rgba(240,122,26,.1);color:var(--or);font-size:.7rem;font-weight:600"><i class="fa-brands fa-react" style="margin-right:4px"></i>React</span>
+          <span style="padding:5px 11px;border-radius:18px;background:rgba(240,122,26,.1);color:var(--or);font-size:.7rem;font-weight:600"><i class="fa-brands fa-js" style="margin-right:4px"></i>JavaScript</span>
+          <span style="padding:5px 11px;border-radius:18px;background:rgba(240,122,26,.1);color:var(--or);font-size:.7rem;font-weight:600"><i class="fa-solid fa-palette" style="margin-right:4px"></i>Branding</span>
+        </div>
+      </div>
     </div>
-    <div class="rv d2" style="background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:28px;transition:all var(--tr)">
-      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
-        <div style="width:56px;height:56px;border-radius:12px;background:var(--or-dim);display:flex;align-items:center;justify-content:center;border:1px solid var(--or)">
-          <i class="fa-solid fa-car" style="font-size:1.6rem;color:var(--or)"></i>
-        </div>
-        <div>
-          <h3 style="font-size:1.05rem;font-weight:700;margin:0">Car Rental Business</h3>
-          <p style="color:var(--tx2);font-size:.85rem;margin:0">Booking-Focused Website</p>
+    <!-- Car Rental Business -->
+    <div class="rv d2 milestone-card" style="background:var(--card);border:1px solid var(--bdr);border-radius:16px;overflow:hidden;transition:all var(--tr)">
+      <div class="milestone-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1552820728-8ac41f1ce891?w=400&h=250&fit=crop" alt="Car Rental" class="milestone-img" loading="lazy" decoding="async">
+        <div class="milestone-overlay">
+          <span style="background:linear-gradient(135deg,var(--or),var(--or2));color:#fff;padding:8px 16px;border-radius:20px;font-size:.8rem;font-weight:700">Booking • HTML5</span>
         </div>
       </div>
-      <p style="color:var(--tx2);font-size:.9rem;line-height:1.6">Clean, conversion-optimized site that makes vehicle bookings frictionless for customers.</p>
+      <div style="padding:24px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <div style="width:48px;height:48px;border-radius:12px;background:var(--or-dim);display:flex;align-items:center;justify-content:center;border:1px solid var(--or)">
+            <i class="fa-solid fa-car" style="font-size:1.4rem;color:var(--or)"></i>
+          </div>
+          <div>
+            <h3 style="font-size:1rem;font-weight:700;margin:0">Car Rental</h3>
+            <p style="color:var(--tx2);font-size:.8rem;margin:0">Booking Website</p>
+          </div>
+        </div>
+        <p style="color:var(--tx2);font-size:.9rem;line-height:1.6;margin-bottom:16px">Clean, conversion-optimized site that makes vehicle bookings frictionless for customers.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span style="padding:5px 11px;border-radius:18px;background:rgba(240,122,26,.1);color:var(--or);font-size:.7rem;font-weight:600"><i class="fa-brands fa-html5" style="margin-right:4px"></i>HTML5</span>
+          <span style="padding:5px 11px;border-radius:18px;background:rgba(240,122,26,.1);color:var(--or);font-size:.7rem;font-weight:600"><i class="fa-brands fa-css3-alt" style="margin-right:4px"></i>CSS3</span>
+          <span style="padding:5px 11px;border-radius:18px;background:rgba(240,122,26,.1);color:var(--or);font-size:.7rem;font-weight:600"><i class="fa-brands fa-js" style="margin-right:4px"></i>JavaScript</span>
+        </div>
+      </div>
     </div>
-    <div class="rv d3" style="background:var(--card);border:1px solid var(--bdr);border-radius:16px;padding:28px;transition:all var(--tr)">
-      <div style="display:flex;align-items:center;gap:16px;margin-bottom:16px">
-        <div style="width:56px;height:56px;border-radius:12px;background:var(--or-dim);display:flex;align-items:center;justify-content:center;border:1px solid var(--or)">
-          <i class="fa-solid fa-users" style="font-size:1.6rem;color:var(--or)"></i>
-        </div>
-        <div>
-          <h3 style="font-size:1.05rem;font-weight:700;margin:0">5+ Businesses Live</h3>
-          <p style="color:var(--tx2);font-size:.85rem;margin:0">From Benin to Beyond</p>
+    <!-- 5+ Businesses Live -->
+    <div class="rv d3 milestone-card" style="background:var(--card);border:1px solid var(--bdr);border-radius:16px;overflow:hidden;transition:all var(--tr)">
+      <div class="milestone-image-wrapper">
+        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?w=400&h=250&fit=crop" alt="5+ Businesses" class="milestone-img" loading="lazy" decoding="async">
+        <div class="milestone-overlay">
+          <span style="background:linear-gradient(135deg,var(--or),var(--or2));color:#fff;padding:8px 16px;border-radius:20px;font-size:.8rem;font-weight:700">Full-Stack • Production</span>
         </div>
       </div>
-      <p style="color:var(--tx2);font-size:.9rem;line-height:1.6">Restaurants, barbershops, food brands, and car rental companies now operating online with production-grade websites.</p>
+      <div style="padding:24px">
+        <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+          <div style="width:48px;height:48px;border-radius:12px;background:var(--or-dim);display:flex;align-items:center;justify-content:center;border:1px solid var(--or)">
+            <i class="fa-solid fa-users" style="font-size:1.4rem;color:var(--or)"></i>
+          </div>
+          <div>
+            <h3 style="font-size:1rem;font-weight:700;margin:0">5+ Businesses</h3>
+            <p style="color:var(--tx2);font-size:.8rem;margin:0">Live Online</p>
+          </div>
+        </div>
+        <p style="color:var(--tx2);font-size:.9rem;line-height:1.6;margin-bottom:16px">Restaurants, barbershops, food brands, and car rental companies now operating online with production-grade websites.</p>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <span style="padding:5px 11px;border-radius:18px;background:rgba(240,122,26,.1);color:var(--or);font-size:.7rem;font-weight:600"><i class="fa-brands fa-node-js" style="margin-right:4px"></i>Node.js</span>
+          <span style="padding:5px 11px;border-radius:18px;background:rgba(240,122,26,.1);color:var(--or);font-size:.7rem;font-weight:600"><i class="fa-brands fa-react" style="margin-right:4px"></i>React</span>
+          <span style="padding:5px 11px;border-radius:18px;background:rgba(240,122,26,.1);color:var(--or);font-size:.7rem;font-weight:600"><i class="fa-solid fa-database" style="margin-right:4px"></i>MongoDB</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
