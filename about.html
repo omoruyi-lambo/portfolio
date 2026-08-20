@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- ─── PRIMARY SEO ──────────────────────────────────── -->
+<title>About Lambo Code | Web Developer & Full-Stack Developer</title>
+<meta name="description" content="Learn more about Lambo Code, the web development brand of Omoruyi Isaiah, and how I build modern websites and web applications for businesses and brands.">
+<meta name="keywords" content="Omoruyi Isaiah, Lambo Code, web developer, full-stack developer Nigeria, web developer Benin City, website developer, web development, website development">
+<meta name="author" content="Omoruyi Isaiah — Lambo Code">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://lambocode.vercel.app/about">
+
+<!-- ─── OPEN GRAPH ───────────────────────────────────── -->
+<meta property="og:type" content="profile">
+<meta property="og:site_name" content="Lambo Code">
+<meta property="og:title" content="About Lambo Code | Web Developer & Full-Stack Developer">
+<meta property="og:description" content="Learn more about Lambo Code, the web development brand of Omoruyi Isaiah, and how I build modern websites and web applications for businesses and brands.">
+<meta property="og:url" content="https://lambocode.vercel.app/about">
+<meta property="og:image" content="https://lambocode.vercel.app/logo.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="Omoruyi Isaiah — Lambo Code Web Developer">
+<meta property="og:locale" content="en_NG">
+
+<!-- ─── TWITTER / X CARD ────────────────────────────── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="About Lambo Code | Web Developer & Full-Stack Developer">
+<meta name="twitter:description" content="Learn more about Lambo Code, the web development brand of Omoruyi Isaiah, and how I build modern websites and web applications for businesses and brands.">
+<meta name="twitter:image" content="https://lambocode.vercel.app/logo.png">
+<meta name="twitter:image:alt" content="Omoruyi Isaiah — Lambo Code Web Developer">
+<meta name="twitter:creator" content="@omoruyi.isaiah">
+
+<!-- ─── BROWSER / PWA ────────────────────────────────── -->
+<meta name="theme-color" content="#080E14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Lambo Code">
+<meta name="application-name" content="Lambo Code">
+<meta name="msapplication-TileColor" content="#080E14">
+
+<!-- ─── GEO / LOCAL SEO ──────────────────────────────── -->
+<meta name="geo.region" content="NG-ED">
+<meta name="geo.placename" content="Benin City, Edo State, Nigeria">
+<meta name="geo.position" content="6.3350;5.6037">
+<meta name="ICBM" content="6.3350, 5.6037">
+
+<!-- ─── STRUCTURED DATA (JSON-LD) ───────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Lambo Code — Omoruyi Isaiah",
+  "url": "https://lambocode.vercel.app/about",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Omoruyi Isaiah",
+    "alternateName": "Lambo Code",
+    "url": "https://lambocode.vercel.app/",
+    "image": "https://lambocode.vercel.app/mee.webp",
+    "jobTitle": "Full-Stack Web Developer",
+    "description": "Web developer and founder of Lambo Code. I design and build modern websites and web applications for businesses, brands and organizations.",
+    "email": "isaiahomoruyi4@gmail.com",
+    "telephone": "+2349157632360",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Benin City",
+      "addressRegion": "Edo State",
+      "addressCountry": "NG"
+    },
+    "sameAs": [
+      "https://www.tiktok.com/@omoruyi.isaiah",
+      "https://github.com/omoruyi-lambo",
+      "https://wa.me/2349157632360"
+    ],
+    "knowsAbout": [
+      "HTML", "CSS", "JavaScript", "TypeScript", "PHP", "SQL",
+      "React", "Next.js", "Node.js", "Tailwind CSS",
+      "MongoDB", "MySQL", "PostgreSQL", "Supabase",
+      "Web Development", "Full-Stack Development"
+    ]
+  }
+}
+</script>
+
+<!-- ─── FONTS ────────────────────────────────────────── -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link rel="preload" as="image" href="mee.webp" type="image/webp" fetchpriority="high">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..60,400;12..60,600;12..60,700;12..60,800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- ─── RESET & ROOT (shared with homepage) ─────────── -->
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --or:#F07A1A; --or2:#FF9A4A; --or-glow:rgba(240,122,26,.35); --or-dim:rgba(240,122,26,.1);
+  --navy:#1B2A3C; --ink:#080E14;
+  --tr:.38s cubic-bezier(.4,0,.2,1);
+}
+[data-theme="dark"]{
+  --bg:#080E14; --bg2:#0C1520; --bg3:#111C28; --card:#111C28; --card2:#162030;
+  --tx:#ECF2F8; --tx2:#7A96B0; --bdr:rgba(255,255,255,.06); --bdr2:rgba(240,122,26,.18);
+  --nav-bg:rgba(8,14,20,.85); --shadow:rgba(0,0,0,.7); --logo-fill:#ECF2F8;
+}
+[data-theme="light"]{
+  --bg:#F0F4F9; --bg2:#E5EDF5; --bg3:#FFFFFF; --card:#FFFFFF; --card2:#F7FAFD;
+  --tx:#0D1A28; --tx2:#4D6478; --bdr:rgba(27,42,60,.1); --bdr2:rgba(240,122,26,.25);
+  --nav-bg:rgba(240,244,249,.9); --shadow:rgba(27,42,60,.2); --logo-fill:#0D1A28;
+}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{
+  background:var(--bg); color:var(--tx);
+  font-family:'Outfit',sans-serif; overflow-x:hidden;
+  transition:background var(--tr),color var(--tr);
+}
+body.menu-open{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--or);outline-offset:4px}
+</style>
+
+<!-- ─── STYLESHEETS ─────────────────────────────────── -->
+<link rel="stylesheet" href="chatbot.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="about.css">
+</head>
+<body>
+
+<!-- ─── SCROLL PROGRESS ─────────────────────────────── -->
+<div id="scrollProgress"></div>
+
+<!-- ─── NAVIGATION ──────────────────────────────────── -->
+<nav id="nav">
+  <a href="index.html" class="ab-nav-logo">
+    <img src="logo.png" alt="Lambo Code logo" width="36" height="36" loading="eager" decoding="async">
+    <span class="ab-nav-brand">LAMBO<span class="or">CODE</span></span>
+  </a>
+  <ul class="ab-nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html" class="active" aria-current="page">About</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="ab-nav-actions">
+    <button class="ab-theme-btn btn-theme" id="themeBtn" type="button" aria-label="Toggle theme"><i class="fa-solid fa-sun"></i></button>
+    <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+to+start+a+project" class="ab-nav-cta" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i> Start a Project
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobNav" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+<div class="ab-mobile-overlay" id="mobOverlay"></div>
+<div class="ab-mobile-menu" id="mobNav">
+  <div class="ab-mobile-head">
+    <a href="index.html" class="ab-nav-logo">
+      <img src="logo.png" alt="Lambo Code logo" width="32" height="32" loading="lazy" decoding="async">
+      <span class="ab-nav-brand">LAMBO<span class="or">CODE</span></span>
+    </a>
+    <button class="ab-mobile-close" id="mobClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="ab-mobile-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+    <li><a href="about.html" class="active" aria-current="page"><i class="fa-solid fa-user"></i>About</a></li>
+    <li><a href="work.html"><i class="fa-solid fa-briefcase"></i>Work</a></li>
+    <li><a href="experience.html"><i class="fa-solid fa-map"></i>Experience</a></li>
+    <li><a href="services.html"><i class="fa-solid fa-gears"></i>Services</a></li>
+    <li><a href="skills.html"><i class="fa-solid fa-microchip"></i>Skills</a></li>
+    <li><a href="process.html"><i class="fa-solid fa-route"></i>Process</a></li>
+    <li><a href="blog.html"><i class="fa-solid fa-lightbulb"></i>Blog</a></li>
+    <li><a href="index.html#contact"><i class="fa-solid fa-paper-plane"></i>Contact</a></li>
+  </ul>
+  <div class="ab-mobile-footer">
+    <button class="ab-theme-btn btn-theme ab-theme-btn--full" id="themeBtnMob" type="button" aria-label="Toggle theme">
+      <i class="fa-solid fa-sun"></i> <span>Switch to Light Mode</span>
+    </button>
+    <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+to+start+a+project" class="ab-mobile-cta" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i> Start a Project
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     MAIN CONTENT — REDESIGNED
+     ═══════════════════════════════════════════════════════ -->
+<main>
+
+<!-- ─── 1. HERO ─────────────────────────────────────── -->
+<section class="ab-hero">
+  <div class="ab-container">
+    <div class="ab-hero-grid">
+      <div class="ab-hero-copy">
+        <span class="ab-kicker"><i class="fa-solid fa-code"></i> About Lambo Code</span>
+        <h1>I build digital products that help <span class="or">businesses grow</span>.</h1>
+        <p>I'm <strong>Omoruyi Isaiah</strong>, the developer behind Lambo Code. I design and build modern websites and web applications for businesses, organizations and brands — from first concept to live deployment.</p>
+        <div class="ab-hero-actions">
+          <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+to+start+a+project" class="ab-btn ab-btn--fill" target="_blank" rel="noopener">
+            <i class="fa-brands fa-whatsapp"></i> Start a Project
+          </a>
+          <a href="index.html#projects" class="ab-btn ab-btn--outline">View My Work</a>
+        </div>
+      </div>
+      <div class="ab-hero-visual">
+        <div class="ab-hero-photo">
+          <picture>
+            <source type="image/webp" srcset="mee.webp">
+            <img src="mee.jpg" alt="Omoruyi Isaiah — Web developer and founder of Lambo Code" loading="eager" decoding="async" fetchpriority="high">
+          </picture>
+        </div>
+      </div>
+    </div>
+
+    <!-- Stats bar -->
+    <div class="ab-stats">
+      <div class="ab-stat">
+        <span class="ab-stat-num">1+</span>
+        <span class="ab-stat-label">Year Building</span>
+      </div>
+      <div class="ab-stat">
+        <span class="ab-stat-num">Full-Stack</span>
+        <span class="ab-stat-label">Frontend &amp; Backend</span>
+      </div>
+      <div class="ab-stat">
+        <span class="ab-stat-num">Clean</span>
+        <span class="ab-stat-label">Modern Code</span>
+      </div>
+      <div class="ab-stat">
+        <span class="ab-stat-num">100%</span>
+        <span class="ab-stat-label">Responsive Design</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 2. STORY ────────────────────────────────────── -->
+<section class="ab-story">
+  <div class="ab-container">
+    <div class="ab-story-grid">
+      <div class="ab-story-quote">
+        <blockquote>
+          "I've always been drawn to technology — not just how things are built, but how they can solve real problems."
+        </blockquote>
+      </div>
+      <div class="ab-story-body">
+        <span class="ab-kicker"><i class="fa-solid fa-pen-nib"></i> My Story</span>
+        <h2>Building with <span class="or">purpose</span>.</h2>
+        <p>That curiosity led me to web development, where I started learning HTML and CSS and quickly moved into building full-stack applications. What I enjoy most is understanding a business and then building something that makes it work better online.</p>
+        <p>A restaurant that needs an ordering system. A brand that needs a clean, credible website. A business that needs a custom platform to manage its operations. These are the kinds of problems I like solving.</p>
+        <p>Through <strong>Lambo Code</strong>, I work with businesses, restaurants, brands and organizations. My focus is on building products that are not only visually clean but actually useful — fast, responsive, secure and easy to maintain.</p>
+        <p>I'm equally interested in frontend and backend development. On the frontend, I care about layout, typography, responsiveness and how something feels to use. On the backend, I care about authentication, data integrity, APIs and building systems that scale as a business grows.</p>
+        <p>That's what Lambo Code is about: building things that work, solving problems that matter, and helping businesses establish themselves online with something professional and reliable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 3. SPECIALIZATIONS ──────────────────────────── -->
+<section class="ab-services">
+  <div class="ab-container">
+    <span class="ab-kicker"><i class="fa-solid fa-focus"></i> Specialization</span>
+    <h2>What I <span class="or">specialize in</span></h2>
+    <p class="ab-sub">Digital products that serve a clear purpose — from business websites to full-stack web applications.</p>
+    <div class="ab-services-grid">
+
+      <div class="ab-service-card">
+        <div class="ab-service-icon"><i class="fa-solid fa-building"></i></div>
+        <h3>Business Websites</h3>
+        <p>Modern websites designed around the goals of a business — built to look professional and drive real results.</p>
+      </div>
+
+      <div class="ab-service-card">
+        <div class="ab-service-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        <h3>E-commerce</h3>
+        <p>Online stores with product catalogues, shopping carts, checkout flows and payment integrations.</p>
+      </div>
+
+      <div class="ab-service-card">
+        <div class="ab-service-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h3>Web Applications</h3>
+        <p>Custom applications with authentication, dashboards, databases and business logic built around real workflows.</p>
+      </div>
+
+      <div class="ab-service-card">
+        <div class="ab-service-icon"><i class="fa-solid fa-diagram-project"></i></div>
+        <h3>Digital Platforms</h3>
+        <p>Larger systems that connect users, content, data and business processes into a single product.</p>
+      </div>
+
+      <div class="ab-service-card">
+        <div class="ab-service-icon"><i class="fa-solid fa-magnifying-glass-chart"></i></div>
+        <h3>Performance &amp; SEO</h3>
+        <p>Clean, responsive and search-engine-friendly implementations that help businesses get found online.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── 4. TECHNOLOGIES ─────────────────────────────── -->
+<section class="ab-tech">
+  <div class="ab-container">
+    <span class="ab-kicker"><i class="fa-solid fa-microchip"></i> Technologies</span>
+    <h2>Technologies I <span class="or">work with</span></h2>
+    <p class="ab-sub">I choose tools based on what each project needs. These are the technologies I have worked with across different projects.</p>
+    <div class="ab-tech-groups">
+
+      <div class="ab-tech-group">
+        <h4>Languages</h4>
+        <div class="ab-tech-pills">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>PHP</span><span>SQL</span>
+        </div>
+      </div>
+
+      <div class="ab-tech-group">
+        <h4>Frontend</h4>
+        <div class="ab-tech-pills">
+          <span>React</span><span>Next.js</span><span>Tailwind CSS</span><span>shadcn/ui</span><span>Framer Motion</span><span>React Hook Form</span><span>Zod</span><span>TanStack Query</span>
+        </div>
+      </div>
+
+      <div class="ab-tech-group">
+        <h4>Backend</h4>
+        <div class="ab-tech-pills">
+          <span>Node.js</span><span>PHP</span><span>Next.js API Routes</span>
+        </div>
+      </div>
+
+      <div class="ab-tech-group">
+        <h4>Databases</h4>
+        <div class="ab-tech-pills">
+          <span>MySQL</span><span>PostgreSQL</span><span>MongoDB</span><span>Supabase</span><span>Mongoose</span>
+        </div>
+      </div>
+
+      <div class="ab-tech-group">
+        <h4>Auth &amp; Integrations</h4>
+        <div class="ab-tech-pills">
+          <span>Supabase Auth</span><span>Auth.js</span><span>Paystack</span><span>Cloudinary</span><span>OneSignal</span><span>Resend</span>
+        </div>
+      </div>
+
+      <div class="ab-tech-group">
+        <h4>Tools &amp; Deployment</h4>
+        <div class="ab-tech-pills">
+          <span>Git</span><span>GitHub</span><span>Vercel</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── 5. HOW I WORK (Timeline) ───────────────────── -->
+<section class="ab-process">
+  <div class="ab-container">
+    <span class="ab-kicker"><i class="fa-solid fa-route"></i> Development Approach</span>
+    <h2>How I approach <span class="or">projects</span></h2>
+    <p class="ab-sub">A clear, organized process that keeps every project focused on solving the right problem.</p>
+    <div class="ab-timeline">
+
+      <div class="ab-timeline-step">
+        <div class="ab-timeline-marker">
+          <span class="ab-timeline-num">01</span>
+          <div class="ab-timeline-line"></div>
+        </div>
+        <div class="ab-timeline-content">
+          <h3>Understand</h3>
+          <p>I first understand the business, audience, goals and problem the product needs to solve.</p>
+        </div>
+      </div>
+
+      <div class="ab-timeline-step">
+        <div class="ab-timeline-marker">
+          <span class="ab-timeline-num">02</span>
+          <div class="ab-timeline-line"></div>
+        </div>
+        <div class="ab-timeline-content">
+          <h3>Plan</h3>
+          <p>I define the structure, functionality and user experience before development.</p>
+        </div>
+      </div>
+
+      <div class="ab-timeline-step">
+        <div class="ab-timeline-marker">
+          <span class="ab-timeline-num">03</span>
+          <div class="ab-timeline-line"></div>
+        </div>
+        <div class="ab-timeline-content">
+          <h3>Design</h3>
+          <p>I create a clear interface that fits the brand and makes the product easy to use.</p>
+        </div>
+      </div>
+
+      <div class="ab-timeline-step">
+        <div class="ab-timeline-marker">
+          <span class="ab-timeline-num">04</span>
+          <div class="ab-timeline-line"></div>
+        </div>
+        <div class="ab-timeline-content">
+          <h3>Build</h3>
+          <p>I develop the product using the technologies that best fit the requirements.</p>
+        </div>
+      </div>
+
+      <div class="ab-timeline-step">
+        <div class="ab-timeline-marker">
+          <span class="ab-timeline-num">05</span>
+          <div class="ab-timeline-line"></div>
+        </div>
+        <div class="ab-timeline-content">
+          <h3>Test</h3>
+          <p>I test responsiveness, functionality, navigation, forms, performance and important edge cases.</p>
+        </div>
+      </div>
+
+      <div class="ab-timeline-step">
+        <div class="ab-timeline-marker">
+          <span class="ab-timeline-num">06</span>
+        </div>
+        <div class="ab-timeline-content">
+          <h3>Launch &amp; Support</h3>
+          <p>I deploy the project and continue improving it when needed.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── 6. PRINCIPLES ──────────────────────────────── -->
+<section class="ab-principles">
+  <div class="ab-container">
+    <div class="ab-principles-layout">
+      <div class="ab-principles-header">
+        <span class="ab-kicker"><i class="fa-solid fa-heart"></i> What I Care About</span>
+        <h2>Development <span class="or">principles</span></h2>
+        <p>These are the standards I hold myself to on every project I build.</p>
+      </div>
+      <div class="ab-principles-grid">
+        <div class="ab-principle">
+          <i class="fa-solid fa-hand-pointer"></i>
+          <div>
+            <h3>Good User Experience</h3>
+            <p>People should immediately understand how to use the product.</p>
+          </div>
+        </div>
+        <div class="ab-principle">
+          <i class="fa-solid fa-bolt"></i>
+          <div>
+            <h3>Performance</h3>
+            <p>Websites should load quickly and feel responsive.</p>
+          </div>
+        </div>
+        <div class="ab-principle">
+          <i class="fa-solid fa-mobile-screen"></i>
+          <div>
+            <h3>Responsive Design</h3>
+            <p>The experience should work properly across phones, tablets and desktops.</p>
+          </div>
+        </div>
+        <div class="ab-principle">
+          <i class="fa-solid fa-code"></i>
+          <div>
+            <h3>Clean Code</h3>
+            <p>The codebase should remain organized and maintainable.</p>
+          </div>
+        </div>
+        <div class="ab-principle">
+          <i class="fa-solid fa-shield-halved"></i>
+          <div>
+            <h3>Security</h3>
+            <p>Authentication, data and application functionality should be handled responsibly.</p>
+          </div>
+        </div>
+        <div class="ab-principle">
+          <i class="fa-solid fa-chart-line"></i>
+          <div>
+            <h3>Business Value</h3>
+            <p>A website should do more than look good — it should solve a real problem.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 7. SELECTED WORK ────────────────────────────── -->
+<section class="ab-work">
+  <div class="ab-container">
+    <span class="ab-kicker"><i class="fa-solid fa-briefcase"></i> Selected Work</span>
+    <h2>Some things I've <span class="or">built</span></h2>
+    <p class="ab-sub">Real projects, each designed and developed from the ground up.</p>
+    <div class="ab-work-grid">
+
+      <article class="ab-work-card">
+        <div class="ab-work-img">
+          <img src="staybridge.png" alt="StayBridge hotel booking platform interface" loading="lazy" decoding="async">
+        </div>
+        <div class="ab-work-body">
+          <span class="ab-work-cat">Website</span>
+          <h3>StayBridge</h3>
+          <p>A hotel booking platform for discovering and booking hotels across Nigeria, with search, booking requests and WhatsApp integration.</p>
+          <div class="ab-work-tags">
+            <span>Next.js</span><span>TypeScript</span><span>Node.js</span>
+          </div>
+          <a href="https://staybridge.onrender.com/" target="_blank" rel="noopener noreferrer" class="ab-work-link">
+            View Project <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="ab-work-card">
+        <div class="ab-work-img">
+          <img src="lamboreads.png" alt="LamboReads digital reading web application interface" loading="lazy" decoding="async">
+        </div>
+        <div class="ab-work-body">
+          <span class="ab-work-cat">Digital Reading Platform</span>
+          <h3>LamboReads</h3>
+          <p>An online reading platform built for discovering books, reading digital content and continuing a personalized reading experience.</p>
+          <div class="ab-work-tags">
+            <span>Next.js</span><span>TypeScript</span><span>Supabase</span>
+          </div>
+          <a href="https://lamboreads.vercel.app/" target="_blank" rel="noopener noreferrer" class="ab-work-link">
+            View Project <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="ab-work-card">
+        <div class="ab-work-img">
+          <img src="lambofoods.png" alt="LamboFoods restaurant web application" loading="lazy" decoding="async">
+        </div>
+        <div class="ab-work-body">
+          <span class="ab-work-cat">Restaurant Web Application</span>
+          <h3>LamboFoods</h3>
+          <p>A restaurant website designed around menu discovery, food presentation, customer contact and online ordering.</p>
+          <div class="ab-work-tags">
+            <span>Next.js</span><span>TypeScript</span><span>Supabase</span>
+          </div>
+          <a href="https://lambofoods.vercel.app/" target="_blank" rel="noopener noreferrer" class="ab-work-link">
+            View Project <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="ab-work-card">
+        <div class="ab-work-img">
+          <img src="lamboboost.png" alt="LamboBoost social media marketing web application dashboard" loading="lazy" decoding="async">
+        </div>
+        <div class="ab-work-body">
+          <span class="ab-work-cat">Social Media Marketing Platform</span>
+          <h3>LamboBoost</h3>
+          <p>An online social media marketing platform focused on helping businesses manage and grow their social presence.</p>
+          <div class="ab-work-tags">
+            <span>Next.js</span><span>TypeScript</span><span>MongoDB</span>
+          </div>
+          <a href="https://lambo-boost.vercel.app/" target="_blank" rel="noopener noreferrer" class="ab-work-link">
+            View Project <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+      <article class="ab-work-card">
+        <div class="ab-work-img">
+          <img src="chef p.jpg" alt="Versatile Pub and Chef P Kitchen full-stack restaurant web application" loading="lazy" decoding="async">
+        </div>
+        <div class="ab-work-body">
+          <span class="ab-work-cat">Full-Stack Restaurant Application</span>
+          <h3>Versatile Pub / Chef P Kitchen</h3>
+          <p>Full-stack restaurant application with real-time order management, push notifications, payment integration and admin dashboard.</p>
+          <div class="ab-work-tags">
+            <span>Node.js</span><span>MongoDB</span><span>Paystack</span>
+          </div>
+          <a href="https://versatile-pub-azqm.vercel.app/" target="_blank" rel="noopener noreferrer" class="ab-work-link">
+            View Project <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </article>
+
+    </div>
+    <div class="ab-work-cta">
+      <a href="index.html#projects" class="ab-btn ab-btn--outline">View All Projects <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 8. PERSONAL ─────────────────────────────────── -->
+<section class="ab-personal">
+  <div class="ab-container">
+    <div class="ab-personal-grid">
+      <div class="ab-personal-photo">
+        <picture>
+          <source type="image/webp" srcset="mee.webp">
+          <img src="mee.jpg" alt="Omoruyi Isaiah working on a development project" loading="lazy" decoding="async">
+        </picture>
+      </div>
+      <div class="ab-personal-copy">
+        <span class="ab-kicker"><i class="fa-solid fa-user"></i> Personal</span>
+        <h2>More than just <span class="or">code</span>.</h2>
+        <p>Good development isn't just about writing clean syntax or choosing the right framework. It's about understanding people, understanding businesses, and building something that actually makes a difference.</p>
+        <p>When I'm not building websites, I'm learning — reading about new tools, experimenting with projects, and thinking about how technology can solve the next problem. That curiosity is what drives every project I take on.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── 9. FINAL CTA ────────────────────────────────── -->
+<section class="ab-cta">
+  <div class="ab-container ab-cta-inner">
+    <h2>Have a project in mind?</h2>
+    <p>Let's build something useful, professional and built around your goals.</p>
+    <div class="ab-cta-actions">
+      <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+to+start+a+project" class="ab-btn ab-btn--cta" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> Start a Project
+      </a>
+      <a href="index.html#contact" class="ab-btn ab-btn--cta-outline">Contact Me</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER (matches homepage)
+     ═══════════════════════════════════════════════════════ -->
+<footer>
+  <div class="ab-foot-accent"></div>
+  <div class="ab-foot-inner">
+    <div class="ab-foot-grid">
+
+      <!-- Brand -->
+      <div class="ab-foot-brand">
+        <a href="index.html" class="ab-nav-logo">
+          <img src="logo.png" alt="Lambo Code logo" width="34" height="34" loading="lazy" decoding="async">
+          <span class="ab-nav-brand">LAMBO<span class="or">CODE</span></span>
+        </a>
+        <p>Designing and building modern websites and web applications for businesses and brands.</p>
+        <div class="ab-foot-social">
+          <a href="https://wa.me/2349157632360" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:isaiahomoruyi4@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.tiktok.com/@omoruyi.isaiah" target="_blank" rel="noopener" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://linkedin.com/in/omoruyi-isaiah" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <!-- Quick Links -->
+      <div class="ab-foot-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="index.html#projects">Work</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#process">Process</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <!-- Services -->
+      <div class="ab-foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#services">Business Websites</a></li>
+          <li><a href="index.html#services">E-commerce</a></li>
+          <li><a href="index.html#services">Web Applications</a></li>
+          <li><a href="index.html#services">Restaurant Websites</a></li>
+          <li><a href="index.html#services">Booking Platforms</a></li>
+          <li><a href="index.html#services">Website Maintenance</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact -->
+      <div class="ab-foot-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:isaiahomoruyi4@gmail.com"><i class="fa-solid fa-envelope"></i>isaiahomoruyi4@gmail.com</a></li>
+          <li><a href="https://wa.me/2349157632360" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a></li>
+          <li><a href="tel:+2349157632360"><i class="fa-solid fa-phone"></i>09157632360</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Bottom bar -->
+    <div class="ab-foot-bottom">
+      <p>&copy; 2026 Lambo Code by Omoruyi Isaiah. All rights reserved.</p>
+      <div class="ab-foot-avail">
+        <span class="ab-foot-dot"></span>
+        Available for new projects
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── CHATBOT WIDGET ──────────────────────────────── -->
+<div id="chatbotContainer" class="chatbot-container">
+  <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open AI Chat">
+    <span class="chatbot-icon"><img src="logo.png" alt="Lambo Code logo"></span>
+    <span class="chatbot-dot"></span>
+  </button>
+  <div id="chatbotWindow" class="chatbot-window">
+    <div class="chatbot-header">
+      <div class="chatbot-header-content">
+        <h3>Lambo AI Assistant</h3>
+        <p class="chatbot-status">Always here to help</p>
+      </div>
+      <button id="closeChatbot" class="chatbot-close" aria-label="Close chat"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="chatbot-message bot-message">
+        <div class="message-content">
+          <p>Hi! I'm Lambo, your AI assistant for Lambo Code. I can help answer questions about web development services, pricing, and hiring Omoruyi. How can I help you today?</p>
+        </div>
+      </div>
+    </div>
+    <div class="chatbot-input-area">
+      <form id="chatbotForm" class="chatbot-form">
+        <input type="text" id="chatbotInput" placeholder="Ask about Lambo Code services..." autocomplete="off">
+        <button type="submit" class="chatbot-send" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SCRIPTS ─────────────────────────────────────── -->
+<script src="home.js"></script>
+<script>
+(function(){
+  const overlay = document.getElementById('mobOverlay');
+  const closeBtn = document.getElementById('mobClose');
+  const menu = document.getElementById('mobNav');
+  const hamburger = document.getElementById('hamburger');
+  const close = () => {
+    menu?.classList.remove('open');
+    overlay?.classList.remove('open');
+    hamburger?.classList.remove('is-open');
+    hamburger?.setAttribute('aria-expanded','false');
+    document.body.classList.remove('menu-open');
+  };
+  overlay?.addEventListener('click', close);
+  closeBtn?.addEventListener('click', close);
+  menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+})();
+</script>
+<script src="chatbot.js"></script>
+</body>
+</html>

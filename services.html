@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- ─── PRIMARY SEO ──────────────────────────────────── -->
+<title>Lambo Code Services | Web Development & Design</title>
+<meta name="description" content="Explore web development services from Lambo Code, including business websites, e-commerce, web applications, restaurant websites, booking platforms and more.">
+<meta name="keywords" content="web development services, website design, e-commerce, web applications, restaurant websites, booking platforms, Nigeria">
+<meta name="author" content="Omoruyi Isaiah — Lambo Code">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://lambocode.vercel.app/services">
+
+<!-- ─── OPEN GRAPH ───────────────────────────────────── -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lambo Code">
+<meta property="og:title" content="Lambo Code Services | Web Development & Design">
+<meta property="og:description" content="Explore web development services from Lambo Code, including business websites, e-commerce, web applications, restaurant websites, booking platforms and more.">
+<meta property="og:url" content="https://lambocode.vercel.app/services">
+<meta property="og:image" content="https://lambocode.vercel.app/logo.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="Lambo Code — Web Development Services">
+<meta property="og:locale" content="en_NG">
+
+<!-- ─── TWITTER / X CARD ────────────────────────────── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lambo Code Services | Web Development & Design">
+<meta name="twitter:description" content="Explore web development services from Lambo Code, including business websites, e-commerce, web applications, restaurant websites, booking platforms and more.">
+<meta name="twitter:image" content="https://lambocode.vercel.app/logo.png">
+<meta name="twitter:image:alt" content="Lambo Code — Web Development Services">
+<meta name="twitter:creator" content="@omoruyi.isaiah">
+
+<!-- ─── BROWSER / PWA ────────────────────────────────── -->
+<meta name="theme-color" content="#080E14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Lambo Code">
+<meta name="application-name" content="Lambo Code">
+<meta name="msapplication-TileColor" content="#080E14">
+
+<!-- ─── GEO / LOCAL SEO ──────────────────────────────── -->
+<meta name="geo.region" content="NG-ED">
+<meta name="geo.placename" content="Benin City, Edo State, Nigeria">
+<meta name="geo.position" content="6.3350;5.6037">
+<meta name="ICBM" content="6.3350, 5.6037">
+
+<!-- ─── STRUCTURED DATA (JSON-LD) ───────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Lambo Code — Web Development Services",
+  "url": "https://lambocode.vercel.app/services",
+  "provider": {
+    "@type": "Person",
+    "name": "Omoruyi Isaiah",
+    "alternateName": "Lambo Code"
+  },
+  "serviceType": "Web Development",
+  "description": "Web development services including business websites, e-commerce, web applications, restaurant websites, booking platforms and more."
+}
+</script>
+
+<!-- ─── FONTS ────────────────────────────────────────── -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..60,400;12..60,600;12..60,700;12..60,800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- ─── RESET & ROOT (shared with homepage) ─────────── -->
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --or:#F07A1A; --or2:#FF9A4A; --or-glow:rgba(240,122,26,.35); --or-dim:rgba(240,122,26,.1);
+  --navy:#1B2A3C; --ink:#080E14;
+  --tr:.38s cubic-bezier(.4,0,.2,1);
+}
+[data-theme="dark"]{
+  --bg:#080E14; --bg2:#0C1520; --bg3:#111C28; --card:#111C28; --card2:#162030;
+  --tx:#ECF2F8; --tx2:#7A96B0; --bdr:rgba(255,255,255,.06); --bdr2:rgba(240,122,26,.18);
+  --nav-bg:rgba(8,14,20,.85); --shadow:rgba(0,0,0,.7); --logo-fill:#ECF2F8;
+}
+[data-theme="light"]{
+  --bg:#F0F4F9; --bg2:#E5EDF5; --bg3:#FFFFFF; --card:#FFFFFF; --card2:#F7FAFD;
+  --tx:#0D1A28; --tx2:#4D6478; --bdr:rgba(27,42,60,.1); --bdr2:rgba(240,122,26,.25);
+  --nav-bg:rgba(240,244,249,.9); --shadow:rgba(27,42,60,.2); --logo-fill:#0D1A28;
+}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{
+  background:var(--bg); color:var(--tx);
+  font-family:'Outfit',sans-serif; overflow-x:hidden;
+  transition:background var(--tr),color var(--tr);
+}
+body.menu-open{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--or);outline-offset:4px}
+</style>
+
+<!-- ─── STYLESHEETS ─────────────────────────────────── -->
+<link rel="stylesheet" href="chatbot.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="services.css">
+</head>
+<body>
+
+<!-- ─── SCROLL PROGRESS ─────────────────────────────── -->
+<div id="scrollProgress"></div>
+
+<!-- ─── NAVIGATION ──────────────────────────────────── -->
+<nav id="nav">
+  <a href="index.html" class="sv-nav-logo">
+    <img src="logo.png" alt="Lambo Code logo" width="36" height="36" loading="eager" decoding="async">
+    <span class="sv-nav-brand">LAMBO<span class="or">CODE</span></span>
+  </a>
+  <ul class="sv-nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="services.html" class="active" aria-current="page">Services</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="sv-nav-actions">
+    <button class="sv-theme-btn btn-theme" id="themeBtn" type="button" aria-label="Toggle theme"><i class="fa-solid fa-sun"></i></button>
+    <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+to+start+a+project" class="sv-nav-cta" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i> Start a Project
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobNav" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="sv-mobile-overlay" id="mobOverlay"></div>
+<div class="sv-mobile-menu" id="mobNav">
+  <div class="sv-mobile-head">
+    <a href="index.html" class="sv-nav-logo">
+      <img src="logo.png" alt="Lambo Code logo" width="32" height="32" loading="lazy" decoding="async">
+      <span class="sv-nav-brand">LAMBO<span class="or">CODE</span></span>
+    </a>
+    <button class="sv-mobile-close" id="mobClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="sv-mobile-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-user"></i>About</a></li>
+    <li><a href="work.html"><i class="fa-solid fa-briefcase"></i>Work</a></li>
+    <li><a href="experience.html"><i class="fa-solid fa-map"></i>Experience</a></li>
+    <li><a href="services.html" class="active" aria-current="page"><i class="fa-solid fa-gears"></i>Services</a></li>
+    <li><a href="skills.html"><i class="fa-solid fa-microchip"></i>Skills</a></li>
+    <li><a href="process.html"><i class="fa-solid fa-route"></i>Process</a></li>
+    <li><a href="blog.html"><i class="fa-solid fa-lightbulb"></i>Blog</a></li>
+    <li><a href="index.html#contact"><i class="fa-solid fa-paper-plane"></i>Contact</a></li>
+  </ul>
+  <div class="sv-mobile-footer">
+    <button class="sv-theme-btn btn-theme sv-theme-btn--full" id="themeBtnMob" type="button" aria-label="Toggle theme">
+      <i class="fa-solid fa-sun"></i> <span>Switch to Light Mode</span>
+    </button>
+    <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+to+start+a+project" class="sv-mobile-cta" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i> Start a Project
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     MAIN CONTENT
+     ═══════════════════════════════════════════════════════ -->
+<main>
+
+<!-- ─── HERO ────────────────────────────────────────── -->
+<section class="sv-hero">
+  <div class="sv-container">
+    <h1>Services</h1>
+    <p>I design and build modern websites and web applications that help businesses, brands and digital products establish a strong presence online.</p>
+  </div>
+</section>
+
+<!-- ─── SERVICES GRID ───────────────────────────────── -->
+<section class="sv-services">
+  <div class="sv-container">
+    <div class="sv-grid">
+
+      <!-- FEATURED: Website Development -->
+      <article class="sv-card sv-card--featured">
+        <div class="sv-card-icon"><i class="fa-solid fa-code"></i></div>
+        <h2>Website Development</h2>
+        <p>Modern, responsive websites built with clean code and a focus on performance. From single-page sites to multi-page platforms — designed to load fast, look professional and convert visitors into customers.</p>
+        <div class="sv-card-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Next.js</span><span>TypeScript</span><span>React</span></div>
+        <a href="index.html#contact" class="sv-card-link">Start a project <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="sv-card">
+        <div class="sv-card-icon"><i class="fa-solid fa-cart-shopping"></i></div>
+        <h2>E-commerce Development</h2>
+        <p>Online stores with product listings, shopping carts, checkout flows and payment integration — built to sell from day one.</p>
+        <div class="sv-card-tech"><span>Next.js</span><span>JavaScript</span><span>Paystack</span></div>
+        <a href="index.html#contact" class="sv-card-link">Start a project <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="sv-card">
+        <div class="sv-card-icon"><i class="fa-solid fa-utensils"></i></div>
+        <h2>Restaurant &amp; Food Websites</h2>
+        <p>Professional restaurant websites with menus, food presentation, ordering features and responsive layouts that turn visitors into customers.</p>
+        <div class="sv-card-tech"><span>Next.js</span><span>Node.js</span><span>MongoDB</span></div>
+        <a href="index.html#contact" class="sv-card-link">Start a project <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="sv-card">
+        <div class="sv-card-icon"><i class="fa-solid fa-building"></i></div>
+        <h2>Business Websites</h2>
+        <p>Professional websites for companies and local businesses that need a strong online presence, clear information and a path from interest to inquiry.</p>
+        <div class="sv-card-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <a href="index.html#contact" class="sv-card-link">Start a project <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="sv-card">
+        <div class="sv-card-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <h2>Web Applications</h2>
+        <p>Interactive web applications with authentication, dashboards, databases and dynamic functionality built around specific business processes.</p>
+        <div class="sv-card-tech"><span>Next.js</span><span>TypeScript</span><span>Supabase</span><span>MongoDB</span></div>
+        <a href="index.html#contact" class="sv-card-link">Start a project <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="sv-card">
+        <div class="sv-card-icon"><i class="fa-solid fa-user"></i></div>
+        <h2>Portfolio Websites</h2>
+        <p>Personal and professional portfolio websites designed to showcase work, skills and achievements with strong visual presentation.</p>
+        <div class="sv-card-tech"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+        <a href="index.html#contact" class="sv-card-link">Start a project <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="sv-card">
+        <div class="sv-card-icon"><i class="fa-solid fa-calendar-check"></i></div>
+        <h2>Booking &amp; Reservation Websites</h2>
+        <p>Websites that let customers view services, check availability and make bookings — built for hotels, venues and service businesses.</p>
+        <div class="sv-card-tech"><span>Next.js</span><span>Node.js</span><span>MongoDB</span></div>
+        <a href="index.html#contact" class="sv-card-link">Start a project <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+      <article class="sv-card">
+        <div class="sv-card-icon"><i class="fa-solid fa-wrench"></i></div>
+        <h2>Custom Web Solutions</h2>
+        <p>Custom frontend and full-stack solutions based on your specific requirements — dashboards, tools, APIs and systems built around your workflow.</p>
+        <div class="sv-card-tech"><span>Node.js</span><span>PHP</span><span>MySQL</span><span>MongoDB</span></div>
+        <a href="index.html#contact" class="sv-card-link">Start a project <i class="fa-solid fa-arrow-right"></i></a>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── HOW I WORK ─────────────────────────────────── -->
+<section class="sv-process">
+  <div class="sv-container">
+    <h2>How I <span class="or">Work</span></h2>
+    <div class="sv-process-grid">
+      <div class="sv-process-step">
+        <div class="sv-process-num">01</div>
+        <h3>Discovery</h3>
+        <p>Understand the project, business and goals.</p>
+      </div>
+      <div class="sv-process-step">
+        <div class="sv-process-num">02</div>
+        <h3>Design</h3>
+        <p>Plan the structure, interface and user experience.</p>
+      </div>
+      <div class="sv-process-step">
+        <div class="sv-process-num">03</div>
+        <h3>Development</h3>
+        <p>Build the responsive website or application.</p>
+      </div>
+      <div class="sv-process-step">
+        <div class="sv-process-num">04</div>
+        <h3>Launch</h3>
+        <p>Test, optimize and prepare the project for deployment.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TECHNOLOGIES ────────────────────────────────── -->
+<section class="sv-tech">
+  <div class="sv-container">
+    <span class="sv-kicker"><i class="fa-solid fa-microchip"></i> Technologies</span>
+    <h2>Tools I <span class="or">work with</span></h2>
+    <p class="sv-sub">I choose technologies based on what each project needs. These are the tools I have experience with across different projects.</p>
+    <div class="sv-tech-grid">
+
+      <div class="sv-tech-card">
+        <h3>Languages</h3>
+        <div class="sv-tech-pills">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>TypeScript</span><span>PHP</span>
+        </div>
+      </div>
+
+      <div class="sv-tech-card">
+        <h3>Frontend</h3>
+        <div class="sv-tech-pills">
+          <span>React</span><span>Next.js</span><span>Tailwind CSS</span>
+        </div>
+      </div>
+
+      <div class="sv-tech-card">
+        <h3>Backend</h3>
+        <div class="sv-tech-pills">
+          <span>Node.js</span><span>PHP</span><span>Next.js API Routes</span>
+        </div>
+      </div>
+
+      <div class="sv-tech-card">
+        <h3>Databases</h3>
+        <div class="sv-tech-pills">
+          <span>MySQL</span><span>MongoDB</span><span>Supabase</span>
+        </div>
+      </div>
+
+      <div class="sv-tech-card">
+        <h3>ORM &amp; Libraries</h3>
+        <div class="sv-tech-pills">
+          <span>Mongoose</span><span>Paystack</span><span>Cloudinary</span>
+        </div>
+      </div>
+
+      <div class="sv-tech-card">
+        <h3>Tools &amp; Deployment</h3>
+        <div class="sv-tech-pills">
+          <span>Git</span><span>GitHub</span><span>Vercel</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─────────────────────────────────────────── -->
+<section class="sv-cta">
+  <div class="sv-container sv-cta-inner">
+    <h2>Have a project in mind?</h2>
+    <p>Let's discuss what you want to build and find the right approach for your project.</p>
+    <div class="sv-cta-actions">
+      <a href="index.html#contact" class="sv-btn sv-btn--cta">
+        Start a Project
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER (matches homepage)
+     ═══════════════════════════════════════════════════════ -->
+<footer>
+  <div class="sv-foot-accent"></div>
+  <div class="sv-foot-inner">
+    <div class="sv-foot-grid">
+
+      <div class="sv-foot-brand">
+        <a href="index.html" class="sv-nav-logo">
+          <img src="logo.png" alt="Lambo Code logo" width="34" height="34" loading="lazy" decoding="async">
+          <span class="sv-nav-brand">LAMBO<span class="or">CODE</span></span>
+        </a>
+        <p>Designing and building modern websites and web applications for businesses and brands.</p>
+        <div class="sv-foot-social">
+          <a href="https://wa.me/2349157632360" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:isaiahomoruyi4@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.tiktok.com/@omoruyi.isaiah" target="_blank" rel="noopener" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://linkedin.com/in/omoruyi-isaiah" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="sv-foot-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="index.html#process">Process</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="sv-foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Website Development</a></li>
+          <li><a href="services.html">E-commerce</a></li>
+          <li><a href="services.html">Restaurant Websites</a></li>
+          <li><a href="services.html">Web Applications</a></li>
+          <li><a href="services.html">Booking Platforms</a></li>
+          <li><a href="services.html">Custom Solutions</a></li>
+        </ul>
+      </div>
+
+      <div class="sv-foot-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:isaiahomoruyi4@gmail.com"><i class="fa-solid fa-envelope"></i>isaiahomoruyi4@gmail.com</a></li>
+          <li><a href="https://wa.me/2349157632360" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a></li>
+          <li><a href="tel:+2349157632360"><i class="fa-solid fa-phone"></i>09157632360</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="sv-foot-bottom">
+      <p>&copy; 2026 Lambo Code by Omoruyi Isaiah. All rights reserved.</p>
+      <div class="sv-foot-avail">
+        <span class="sv-foot-dot"></span>
+        Available for new projects
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── CHATBOT WIDGET ──────────────────────────────── -->
+<div id="chatbotContainer" class="chatbot-container">
+  <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open AI Chat">
+    <span class="chatbot-icon"><img src="logo.png" alt="Lambo Code logo"></span>
+    <span class="chatbot-dot"></span>
+  </button>
+  <div id="chatbotWindow" class="chatbot-window">
+    <div class="chatbot-header">
+      <div class="chatbot-header-content">
+        <h3>Lambo AI Assistant</h3>
+        <p class="chatbot-status">Always here to help</p>
+      </div>
+      <button id="closeChatbot" class="chatbot-close" aria-label="Close chat"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="chatbot-message bot-message">
+        <div class="message-content">
+          <p>Hi! I'm Lambo, your AI assistant for Lambo Code. I can help answer questions about web development services, pricing, and hiring Omoruyi. How can I help you today?</p>
+        </div>
+      </div>
+    </div>
+    <div class="chatbot-input-area">
+      <form id="chatbotForm" class="chatbot-form">
+        <input type="text" id="chatbotInput" placeholder="Ask about Lambo Code services..." autocomplete="off">
+        <button type="submit" class="chatbot-send" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SCRIPTS ─────────────────────────────────────── -->
+<script src="home.js"></script>
+<script>
+(function(){
+  const overlay = document.getElementById('mobOverlay');
+  const closeBtn = document.getElementById('mobClose');
+  const menu = document.getElementById('mobNav');
+  const hamburger = document.getElementById('hamburger');
+  const close = () => {
+    menu?.classList.remove('open');
+    overlay?.classList.remove('open');
+    hamburger?.classList.remove('is-open');
+    hamburger?.setAttribute('aria-expanded','false');
+    document.body.classList.remove('menu-open');
+  };
+  overlay?.addEventListener('click', close);
+  closeBtn?.addEventListener('click', close);
+  menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+})();
+</script>
+<script src="chatbot.js"></script>
+</body>
+</html>

@@ -7,8 +7,8 @@ class LamboAIChatbot {
     this.conversationHistory = [];
     // NOTE: For production, use a backend proxy to hide the API key!
     // This is a free tier Gemini API key for demonstration purposes only.
-    this.GEMINI_API_KEY = "AIzaSyA83nD2HqKxw2JgQZpYqzTtRrZzXxYwWvVu";
-    this.GEMINI_API_URL = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.0-flash:generateContent";
+    this.GEMINI_API_KEY = "";
+    this.GEMINI_API_URL = "";
     
     this.systemPrompt = `You are Lambo, a helpful AI assistant for Lambo Code (Omoruyi Isaiah), a full-stack web developer based in Benin City, Nigeria.
 

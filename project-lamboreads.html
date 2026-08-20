@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- ─── PRIMARY SEO ──────────────────────────────────── -->
+<title>LamboReads | Lambo Code</title>
+<meta name="description" content="Case study of LamboReads, a digital reading platform designed and developed by Lambo Code. Built with Next.js, TypeScript and Supabase.">
+<meta name="author" content="Omoruyi Isaiah — Lambo Code">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://lambocode.vercel.app/project-lamboreads">
+
+<!-- ─── OPEN GRAPH ───────────────────────────────────── -->
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Lambo Code">
+<meta property="og:title" content="LamboReads | Lambo Code">
+<meta property="og:description" content="Case study of LamboReads, a digital reading platform designed and developed by Lambo Code.">
+<meta property="og:url" content="https://lambocode.vercel.app/project-lamboreads">
+<meta property="og:image" content="https://lambocode.vercel.app/lamboreads.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="LamboReads digital reading platform interface">
+<meta property="og:locale" content="en_NG">
+
+<!-- ─── TWITTER / X CARD ────────────────────────────── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="LamboReads | Lambo Code">
+<meta name="twitter:description" content="Case study of LamboReads, a digital reading platform designed and developed by Lambo Code.">
+<meta name="twitter:image" content="https://lambocode.vercel.app/lamboreads.png">
+<meta name="twitter:image:alt" content="LamboReads digital reading platform interface">
+<meta name="twitter:creator" content="@omoruyi.isaiah">
+
+<!-- ─── BROWSER / PWA ────────────────────────────────── -->
+<meta name="theme-color" content="#080E14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Lambo Code">
+
+<!-- ─── STRUCTURED DATA (JSON-LD) ───────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "LamboReads",
+  "url": "https://lamboreads.vercel.app/",
+  "applicationCategory": "WebApplication",
+  "description": "A digital reading platform for discovering and reading books online, with authentication, personalized reading features and a growing library.",
+  "author": {
+    "@type": "Person",
+    "name": "Omoruyi Isaiah",
+    "alternateName": "Lambo Code"
+  },
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  }
+}
+</script>
+
+<!-- ─── FONTS ────────────────────────────────────────── -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..60,400;12..60,600;12..60,700;12..60,800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- ─── RESET & ROOT (shared with homepage) ─────────── -->
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --or:#F07A1A; --or2:#FF9A4A; --or-glow:rgba(240,122,26,.35); --or-dim:rgba(240,122,26,.1);
+  --navy:#1B2A3C; --ink:#080E14;
+  --tr:.38s cubic-bezier(.4,0,.2,1);
+}
+[data-theme="dark"]{
+  --bg:#080E14; --bg2:#0C1520; --bg3:#111C28; --card:#111C28; --card2:#162030;
+  --tx:#ECF2F8; --tx2:#7A96B0; --bdr:rgba(255,255,255,.06); --bdr2:rgba(240,122,26,.18);
+  --nav-bg:rgba(8,14,20,.85); --shadow:rgba(0,0,0,.7); --logo-fill:#ECF2F8;
+}
+[data-theme="light"]{
+  --bg:#F0F4F9; --bg2:#E5EDF5; --bg3:#FFFFFF; --card:#FFFFFF; --card2:#F7FAFD;
+  --tx:#0D1A28; --tx2:#4D6478; --bdr:rgba(27,42,60,.1); --bdr2:rgba(240,122,26,.25);
+  --nav-bg:rgba(240,244,249,.9); --shadow:rgba(27,42,60,.2); --logo-fill:#0D1A28;
+}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{
+  background:var(--bg); color:var(--tx);
+  font-family:'Outfit',sans-serif; overflow-x:hidden;
+  transition:background var(--tr),color var(--tr);
+}
+body.menu-open{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--or);outline-offset:4px}
+</style>
+
+<!-- ─── STYLESHEETS ─────────────────────────────────── -->
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="case-study.css">
+</head>
+<body>
+
+<!-- ─── SCROLL PROGRESS ─────────────────────────────── -->
+<div id="scrollProgress"></div>
+
+<!-- ═══════════════════════════════════════════════════════
+     NAVIGATION
+     ═══════════════════════════════════════════════════════ -->
+<nav id="nav">
+  <a href="index.html" class="pj-nav-logo">
+    <img src="logo.png" alt="Lambo Code logo" width="36" height="36" loading="eager" decoding="async">
+    <span class="pj-nav-brand">LAMBO<span class="or">CODE</span></span>
+  </a>
+  <ul class="pj-nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="work.html" class="active" aria-current="page">Work</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="skills.html">Skills</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="pj-nav-actions">
+    <button class="pj-theme-btn btn-theme" id="themeBtn" type="button" aria-label="Toggle theme"><i class="fa-solid fa-sun"></i></button>
+    <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+to+start+a+project" class="pj-nav-cta" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i> Start a Project
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobNav" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="pj-mobile-overlay" id="mobOverlay"></div>
+<div class="pj-mobile-menu" id="mobNav">
+  <div class="pj-mobile-head">
+    <a href="index.html" class="pj-nav-logo">
+      <img src="logo.png" alt="Lambo Code logo" width="32" height="32" loading="lazy" decoding="async">
+      <span class="pj-nav-brand">LAMBO<span class="or">CODE</span></span>
+    </a>
+    <button class="pj-mobile-close" id="mobClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="pj-mobile-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-user"></i>About</a></li>
+    <li><a href="work.html" class="active" aria-current="page"><i class="fa-solid fa-briefcase"></i>Work</a></li>
+    <li><a href="experience.html"><i class="fa-solid fa-map"></i>Experience</a></li>
+    <li><a href="services.html"><i class="fa-solid fa-gears"></i>Services</a></li>
+    <li><a href="skills.html"><i class="fa-solid fa-microchip"></i>Skills</a></li>
+    <li><a href="process.html"><i class="fa-solid fa-route"></i>Process</a></li>
+    <li><a href="blog.html"><i class="fa-solid fa-lightbulb"></i>Blog</a></li>
+    <li><a href="index.html#contact"><i class="fa-solid fa-paper-plane"></i>Contact</a></li>
+  </ul>
+  <div class="pj-mobile-footer">
+    <button class="pj-theme-btn btn-theme pj-theme-btn--full" id="themeBtnMob" type="button" aria-label="Toggle theme">
+      <i class="fa-solid fa-sun"></i> <span>Switch to Light Mode</span>
+    </button>
+    <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+to+start+a+project" class="pj-mobile-cta" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i> Start a Project
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     MAIN CONTENT
+     ═══════════════════════════════════════════════════════ -->
+<main>
+
+<!-- ─── HERO ────────────────────────────────────────── -->
+<section class="pj-hero">
+  <div class="pj-container">
+    <div class="pj-hero-inner">
+      <div class="pj-hero-copy">
+        <span class="pj-kicker"><i class="fa-solid fa-book-open"></i> Web Application</span>
+        <h1>LamboReads</h1>
+        <p>A digital reading platform for discovering and reading books online, with user accounts, personalized reading features and a growing library of public-domain titles.</p>
+        <div class="pj-hero-actions">
+          <a href="https://lamboreads.vercel.app/" target="_blank" rel="noopener noreferrer" class="pj-btn pj-btn--fill">
+            <i class="fa-solid fa-arrow-up-right-from-square"></i> Live Demo
+          </a>
+          <a href="https://github.com/omoruyi-lambo/LamboReads" target="_blank" rel="noopener noreferrer" class="pj-btn pj-btn--outline">
+            <i class="fa-brands fa-github"></i> View Source
+          </a>
+        </div>
+      </div>
+      <div class="pj-hero-preview">
+        <img src="lamboreads.png" alt="LamboReads digital reading platform interface showing book discovery and reading features" width="1040" height="650" loading="eager" decoding="async">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROJECT INFO ────────────────────────────────── -->
+<section class="pj-info">
+  <div class="pj-container">
+    <div class="pj-info-grid">
+      <div class="pj-info-item">
+        <span class="pj-info-label">Type</span>
+        <span class="pj-info-value">Web Application</span>
+      </div>
+      <div class="pj-info-item">
+        <span class="pj-info-label">Status</span>
+        <span class="pj-info-value">Live</span>
+      </div>
+      <div class="pj-info-item">
+        <span class="pj-info-label">Technologies</span>
+        <span class="pj-info-value">Next.js, TypeScript, Supabase</span>
+      </div>
+      <div class="pj-info-item">
+        <span class="pj-info-label">Live URL</span>
+        <span class="pj-info-value"><a href="https://lamboreads.vercel.app/" target="_blank" rel="noopener noreferrer">lamboreads.vercel.app</a></span>
+      </div>
+      <div class="pj-info-item">
+        <span class="pj-info-label">Repository</span>
+        <span class="pj-info-value"><a href="https://github.com/omoruyi-lambo/LamboReads" target="_blank" rel="noopener noreferrer">GitHub</a></span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── OVERVIEW ────────────────────────────────────── -->
+<section class="pj-section">
+  <div class="pj-container">
+    <span class="pj-kicker"><i class="fa-solid fa-circle-info"></i> Overview</span>
+    <h2>What I built</h2>
+    <p>LamboReads is a digital reading platform that lets users discover books, read them in a clean browser-based reader, and track their reading progress over time. The platform focuses on public-domain literature — making classic and freely available books accessible in a modern, organized interface.</p>
+    <p>I designed and built the full application from the ground up: the book discovery experience, the reading interface, user authentication, reading progress persistence, bookmarks, notes, and the administrative tools for managing the library.</p>
+    <p>The goal was to create something that feels like a real product — not a template — with proper data architecture, authentication flows and a reading experience that works smoothly across devices.</p>
+  </div>
+</section>
+
+<!-- ─── THE CHALLENGE ───────────────────────────────── -->
+<section class="pj-section pj-section--alt">
+  <div class="pj-container">
+    <span class="pj-kicker"><i class="fa-solid fa-bullseye"></i> The Challenge</span>
+    <h2>The problem I was solving</h2>
+    <p>Most free e-book platforms feel either outdated or cluttered. Project Gutenberg and similar archives have enormous libraries but interfaces that haven't kept up with modern expectations. Commercial reading apps require subscriptions and lock content behind paywalls.</p>
+    <p>I wanted to build something in between: a platform that surfaces public-domain books in a clean, contemporary interface — with the kind of UX you'd expect from a modern web application. Book discovery should feel intuitive. The reader should be distraction-free. And your progress, bookmarks and notes should persist so you can pick up where you left off.</p>
+    <p>The technical challenge was building a reading experience that handles variable content lengths (some books are 200 pages, some are 2,000), manages user state across sessions, and stays performant — all within a single web application.</p>
+  </div>
+</section>
+
+<!-- ─── MY APPROACH ─────────────────────────────────── -->
+<section class="pj-section">
+  <div class="pj-container">
+    <span class="pj-kicker"><i class="fa-solid fa-code-branch"></i> My Approach</span>
+    <h2>How I built it</h2>
+    <p>I chose a stack that would let me move quickly without sacrificing quality. <strong>Next.js</strong> gave me server-side rendering for the book pages and static generation for the discovery/catalogue pages. <strong>TypeScript</strong> caught type errors early and made the codebase more maintainable as it grew. <strong>Supabase</strong> handled authentication, the PostgreSQL database and file storage in one platform.</p>
+
+    <div class="pj-arch-grid">
+      <div class="pj-arch-card">
+        <h3><i class="fa-solid fa-desktop"></i> Frontend</h3>
+        <p>Next.js with the App Router, TypeScript, and a component-based architecture. The reading interface uses a custom renderer that paginates content and tracks scroll position for progress persistence.</p>
+      </div>
+      <div class="pj-arch-card">
+        <h3><i class="fa-solid fa-database"></i> Database</h3>
+        <p>Supabase PostgreSQL for all structured data: user accounts, book metadata, reading progress, bookmarks, notes and library collections. Row-level security policies ensure users can only access their own data.</p>
+      </div>
+      <div class="pj-arch-card">
+        <h3><i class="fa-solid fa-shield-halved"></i> Authentication</h3>
+        <p>Supabase Auth with email/password sign-up and login. Session management is handled automatically, with protected routes that redirect unauthenticated users to the login page.</p>
+      </div>
+      <div class="pj-arch-card">
+        <h3><i class="fa-solid fa-cloud"></i> Storage</h3>
+        <p>Supabase Storage for book cover images and content files. Public buckets serve static assets while authenticated endpoints handle user-generated content like notes and highlights.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── KEY FEATURES ────────────────────────────────── -->
+<section class="pj-section pj-section--alt">
+  <div class="pj-container">
+    <span class="pj-kicker"><i class="fa-solid fa-star"></i> Key Features</span>
+    <h2>What the application does</h2>
+    <div class="pj-features">
+      <div class="pj-feature">
+        <div class="pj-feature-num">01</div>
+        <h3>User Authentication</h3>
+        <p>Secure sign-up and login with Supabase Auth. Each user has a private account with their own library, reading history and saved progress.</p>
+      </div>
+      <div class="pj-feature">
+        <div class="pj-feature-num">02</div>
+        <h3>Book Discovery</h3>
+        <p>Browse the library by category, search by title or author, and discover new reads through curated collections and featured titles.</p>
+      </div>
+      <div class="pj-feature">
+        <div class="pj-feature-num">03</div>
+        <h3>Reading Progress</h3>
+        <p>The reader tracks where you left off in every book. Progress is saved to your account automatically so you can switch devices and pick up seamlessly.</p>
+      </div>
+      <div class="pj-feature">
+        <div class="pj-feature-num">04</div>
+        <h3>Bookmarks and Notes</h3>
+        <p>Save your place with bookmarks and add personal notes to any passage. Your annotations are stored alongside your reading progress.</p>
+      </div>
+      <div class="pj-feature">
+        <div class="pj-feature-num">05</div>
+        <h3>Personalized Library</h3>
+        <p>Your reading history, saved books and current reads are organized in a personal library dashboard that gives you a clear overview of your activity.</p>
+      </div>
+      <div class="pj-feature">
+        <div class="pj-feature-num">06</div>
+        <h3>Responsive Reader</h3>
+        <p>The reading interface adapts to screen size — comfortable on desktop, tablet and phone. Typography scales appropriately and navigation stays accessible at every breakpoint.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── DEVELOPMENT DETAILS ─────────────────────────── -->
+<section class="pj-section">
+  <div class="pj-container">
+    <span class="pj-kicker"><i class="fa-solid fa-wrench"></i> Development Details</span>
+    <h2>Technical implementation</h2>
+
+    <div class="pj-arch-grid">
+      <div class="pj-arch-card">
+        <h3><i class="fa-solid fa-book-reader"></i> Building the reader</h3>
+        <p>The reading experience is the core of the product. I built a custom content renderer that handles chapter navigation, text sizing, and progress tracking. The reader persists position data to Supabase on interval, so progress is always saved without requiring explicit user action.</p>
+      </div>
+      <div class="pj-arch-card">
+        <h3><i class="fa-solid fa-database"></i> Data architecture</h3>
+        <p>The database schema separates book metadata from user-generated data. Books, chapters and categories live in shared tables. Reading progress, bookmarks and notes are per-user, enforced through Supabase row-level security policies that tie every row to an authenticated user ID.</p>
+      </div>
+      <div class="pj-arch-card">
+        <h3><i class="fa-solid fa-mobile-screen"></i> Responsive interface</h3>
+        <p>The layout uses CSS Grid and container queries to adapt across breakpoints. The catalogue uses a responsive grid that shifts from three columns on desktop to a single column on mobile. The reader itself adjusts font size, line height and margins based on viewport width.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── TECHNOLOGIES ────────────────────────────────── -->
+<section class="pj-section pj-section--alt">
+  <div class="pj-container">
+    <span class="pj-kicker"><i class="fa-solid fa-microchip"></i> Technologies</span>
+    <h2>Tech stack</h2>
+    <p>Only technologies actually used in this project.</p>
+    <div class="pj-tech-grid">
+      <span class="pj-tech-pill">Next.js</span>
+      <span class="pj-tech-pill">TypeScript</span>
+      <span class="pj-tech-pill">Supabase</span>
+      <span class="pj-tech-pill">PostgreSQL</span>
+      <span class="pj-tech-pill">Supabase Auth</span>
+      <span class="pj-tech-pill">Supabase Storage</span>
+      <span class="pj-tech-pill">React</span>
+      <span class="pj-tech-pill">CSS</span>
+    </div>
+  </div>
+</section>
+
+<!-- ─── WHAT I LEARNED ──────────────────────────────── -->
+<section class="pj-section">
+  <div class="pj-container">
+    <span class="pj-kicker"><i class="fa-solid fa-graduation-cap"></i> What I Learned</span>
+    <h2>Takeaways from this project</h2>
+    <div class="pj-learned">
+      <div class="pj-learned-item">
+        <div class="pj-learned-icon"><i class="fa-solid fa-book"></i></div>
+        <div>
+          <h3>Reading UX is harder than it looks</h3>
+          <p>Building a reading interface that feels natural — with proper pagination, font scaling and progress tracking — required more iteration than expected. Small details like line height and margin ratios make a huge difference in readability.</p>
+        </div>
+      </div>
+      <div class="pj-learned-item">
+        <div class="pj-learned-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <div>
+          <h3>Row-level security changes everything</h3>
+          <p>Supabase's RLS policies let me enforce data access rules at the database level rather than relying solely on application logic. This made the backend significantly more secure with less code.</p>
+        </div>
+      </div>
+      <div class="pj-learned-item">
+        <div class="pj-learned-icon"><i class="fa-solid fa-layer-group"></i></div>
+        <div>
+          <h3>Separating content from user data</h3>
+          <p>Designing the schema so book data and user data live in separate tables — connected through foreign keys but protected by different access policies — was the right architectural decision. It keeps the data model clean and scalable.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─────────────────────────────────────────── -->
+<section class="pj-cta">
+  <div class="pj-container pj-cta-inner">
+    <h2>Want to build something similar?</h2>
+    <p>If you have a project in mind, let's discuss what you want to build.</p>
+    <div class="pj-cta-actions">
+      <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+to+start+a+project" class="pj-btn pj-btn--dark" target="_blank" rel="noopener">
+        <i class="fa-brands fa-whatsapp"></i> Start a Project
+      </a>
+      <a href="work.html" class="pj-btn pj-btn--ghost" style="color:#151b1f;border-color:rgba(21,27,31,.35)">
+        View All Projects
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROJECT NAVIGATION ──────────────────────────── -->
+<section class="pj-nav">
+  <div class="pj-container">
+    <div class="pj-nav-inner">
+      <a href="project-staybridge.html" class="pj-nav-link pj-nav-link--prev">
+        <i class="fa-solid fa-arrow-left"></i>
+        <div>
+          <span class="pj-nav-link-label">Previous Project</span>
+          <span class="pj-nav-link-title">StayBridge</span>
+        </div>
+      </a>
+      <div class="pj-nav-back">
+        <a href="work.html"><i class="fa-solid fa-grid-2"></i> Back to Projects</a>
+      </div>
+      <a href="project-lambofoods.html" class="pj-nav-link pj-nav-link--next">
+        <div>
+          <span class="pj-nav-link-label">Next Project</span>
+          <span class="pj-nav-link-title">LamboFoods</span>
+        </div>
+        <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER
+     ═══════════════════════════════════════════════════════ -->
+<footer>
+  <div class="pj-foot-accent"></div>
+  <div class="pj-foot-inner">
+    <div class="pj-foot-grid">
+      <div class="pj-foot-brand">
+        <a href="index.html" class="pj-nav-logo">
+          <img src="logo.png" alt="Lambo Code logo" width="34" height="34" loading="lazy" decoding="async">
+          <span class="pj-nav-brand">LAMBO<span class="or">CODE</span></span>
+        </a>
+        <p>Designing and building modern websites and web applications for businesses and brands.</p>
+        <div class="pj-foot-social">
+          <a href="https://wa.me/2349157632360" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:isaiahomoruyi4@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.tiktok.com/@omoruyi.isaiah" target="_blank" rel="noopener" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://linkedin.com/in/omoruyi-isaiah" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+      <div class="pj-foot-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="index.html#services">Services</a></li>
+          <li><a href="index.html#process">Process</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="pj-foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="index.html#services">Business Websites</a></li>
+          <li><a href="index.html#services">E-commerce</a></li>
+          <li><a href="index.html#services">Web Applications</a></li>
+          <li><a href="index.html#services">Restaurant Websites</a></li>
+          <li><a href="index.html#services">Booking Platforms</a></li>
+          <li><a href="index.html#services">Website Maintenance</a></li>
+        </ul>
+      </div>
+      <div class="pj-foot-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:isaiahomoruyi4@gmail.com"><i class="fa-solid fa-envelope"></i>isaiahomoruyi4@gmail.com</a></li>
+          <li><a href="https://wa.me/2349157632360" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a></li>
+          <li><a href="tel:+2349157632360"><i class="fa-solid fa-phone"></i>09157632360</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="pj-foot-bottom">
+      <p>&copy; 2026 Lambo Code by Omoruyi Isaiah. All rights reserved.</p>
+      <div class="pj-foot-avail">
+        <span class="pj-foot-dot"></span>
+        Available for new projects
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── SCRIPTS ─────────────────────────────────────── -->
+<script src="home.js"></script>
+<script>
+(function(){
+  const overlay = document.getElementById('mobOverlay');
+  const closeBtn = document.getElementById('mobClose');
+  const menu = document.getElementById('mobNav');
+  const hamburger = document.getElementById('hamburger');
+  const close = () => {
+    menu?.classList.remove('open');
+    overlay?.classList.remove('open');
+    hamburger?.classList.remove('is-open');
+    hamburger?.setAttribute('aria-expanded','false');
+    document.body.classList.remove('menu-open');
+  };
+  overlay?.addEventListener('click', close);
+  closeBtn?.addEventListener('click', close);
+  menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+})();
+</script>
+</body>
+</html>

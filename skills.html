@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- ─── PRIMARY SEO ──────────────────────────────────── -->
+<title>Skills & Technologies | Lambo Code</title>
+<meta name="description" content="Technical skills and technologies used by Lambo Code for web development, including HTML, CSS, JavaScript, Next.js, TypeScript, Node.js, MongoDB, Supabase and more.">
+<meta name="keywords" content="web development skills, frontend technologies, backend technologies, Next.js, TypeScript, MongoDB, Supabase, Node.js">
+<meta name="author" content="Omoruyi Isaiah — Lambo Code">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<link rel="canonical" href="https://lambocode.vercel.app/skills">
+
+<!-- ─── OPEN GRAPH ───────────────────────────────────── -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lambo Code">
+<meta property="og:title" content="Skills & Technologies | Lambo Code">
+<meta property="og:description" content="Technical skills and technologies used by Lambo Code for web development, including HTML, CSS, JavaScript, Next.js, TypeScript, Node.js, MongoDB, Supabase and more.">
+<meta property="og:url" content="https://lambocode.vercel.app/skills">
+<meta property="og:image" content="https://lambocode.vercel.app/logo.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="Lambo Code — Skills & Technologies">
+<meta property="og:locale" content="en_NG">
+
+<!-- ─── TWITTER / X CARD ────────────────────────────── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Skills & Technologies | Lambo Code">
+<meta name="twitter:description" content="Technical skills and technologies used by Lambo Code for web development, including HTML, CSS, JavaScript, Next.js, TypeScript, Node.js, MongoDB, Supabase and more.">
+<meta name="twitter:image" content="https://lambocode.vercel.app/logo.png">
+<meta name="twitter:image:alt" content="Lambo Code — Skills & Technologies">
+<meta name="twitter:creator" content="@omoruyi.isaiah">
+
+<!-- ─── BROWSER / PWA ────────────────────────────────── -->
+<meta name="theme-color" content="#080E14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Lambo Code">
+<meta name="application-name" content="Lambo Code">
+<meta name="msapplication-TileColor" content="#080E14">
+
+<!-- ─── GEO / LOCAL SEO ──────────────────────────────── -->
+<meta name="geo.region" content="NG-ED">
+<meta name="geo.placename" content="Benin City, Edo State, Nigeria">
+<meta name="geo.position" content="6.3350;5.6037">
+<meta name="ICBM" content="6.3350, 5.6037">
+
+<!-- ─── STRUCTURED DATA (JSON-LD) ───────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Omoruyi Isaiah",
+  "alternateName": "Lambo Code",
+  "url": "https://lambocode.vercel.app/skills",
+  "knowsAbout": ["HTML", "CSS", "JavaScript", "TypeScript", "Next.js", "Node.js", "MongoDB", "Supabase", "Web Development"]
+}
+</script>
+
+<!-- ─── FONTS ────────────────────────────────────────── -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..60,400;12..60,600;12..60,700;12..60,800&family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+
+<!-- ─── RESET & ROOT (shared with homepage) ─────────── -->
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --or:#F07A1A; --or2:#FF9A4A; --or-glow:rgba(240,122,26,.35); --or-dim:rgba(240,122,26,.1);
+  --navy:#1B2A3C; --ink:#080E14;
+  --tr:.38s cubic-bezier(.4,0,.2,1);
+}
+[data-theme="dark"]{
+  --bg:#080E14; --bg2:#0C1520; --bg3:#111C28; --card:#111C28; --card2:#162030;
+  --tx:#ECF2F8; --tx2:#7A96B0; --bdr:rgba(255,255,255,.06); --bdr2:rgba(240,122,26,.18);
+  --nav-bg:rgba(8,14,20,.85); --shadow:rgba(0,0,0,.7); --logo-fill:#ECF2F8;
+}
+[data-theme="light"]{
+  --bg:#F0F4F9; --bg2:#E5EDF5; --bg3:#FFFFFF; --card:#FFFFFF; --card2:#F7FAFD;
+  --tx:#0D1A28; --tx2:#4D6478; --bdr:rgba(27,42,60,.1); --bdr2:rgba(240,122,26,.25);
+  --nav-bg:rgba(240,244,249,.9); --shadow:rgba(27,42,60,.2); --logo-fill:#0D1A28;
+}
+html{scroll-behavior:smooth;scroll-padding-top:92px}
+body{
+  background:var(--bg); color:var(--tx);
+  font-family:'Outfit',sans-serif; overflow-x:hidden;
+  transition:background var(--tr),color var(--tr);
+}
+body.menu-open{overflow:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:3px solid var(--or);outline-offset:4px}
+</style>
+
+<!-- ─── STYLESHEETS ─────────────────────────────────── -->
+<link rel="stylesheet" href="chatbot.css">
+<link rel="stylesheet" href="home.css">
+<link rel="stylesheet" href="skills.css">
+</head>
+<body>
+
+<!-- ─── SCROLL PROGRESS ─────────────────────────────── -->
+<div id="scrollProgress"></div>
+
+<!-- ─── NAVIGATION ──────────────────────────────────── -->
+<nav id="nav">
+  <a href="index.html" class="sk-nav-logo">
+    <img src="logo.png" alt="Lambo Code logo" width="36" height="36" loading="eager" decoding="async">
+    <span class="sk-nav-brand">LAMBO<span class="or">CODE</span></span>
+  </a>
+  <ul class="sk-nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="work.html">Work</a></li>
+    <li><a href="experience.html">Experience</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="skills.html" class="active" aria-current="page">Skills</a></li>
+    <li><a href="process.html">Process</a></li>
+    <li><a href="blog.html">Blog</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+  <div class="sk-nav-actions">
+    <button class="sk-theme-btn btn-theme" id="themeBtn" type="button" aria-label="Toggle theme"><i class="fa-solid fa-sun"></i></button>
+    <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+to+start+a+project" class="sk-nav-cta" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i> Start a Project
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobNav" type="button">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- Mobile menu -->
+<div class="sk-mobile-overlay" id="mobOverlay"></div>
+<div class="sk-mobile-menu" id="mobNav">
+  <div class="sk-mobile-head">
+    <a href="index.html" class="sk-nav-logo">
+      <img src="logo.png" alt="Lambo Code logo" width="32" height="32" loading="lazy" decoding="async">
+      <span class="sk-nav-brand">LAMBO<span class="or">CODE</span></span>
+    </a>
+    <button class="sk-mobile-close" id="mobClose" aria-label="Close menu"><i class="fa-solid fa-xmark"></i></button>
+  </div>
+  <ul class="sk-mobile-links">
+    <li><a href="index.html"><i class="fa-solid fa-house"></i>Home</a></li>
+    <li><a href="about.html"><i class="fa-solid fa-user"></i>About</a></li>
+    <li><a href="work.html"><i class="fa-solid fa-briefcase"></i>Work</a></li>
+    <li><a href="experience.html"><i class="fa-solid fa-map"></i>Experience</a></li>
+    <li><a href="services.html"><i class="fa-solid fa-gears"></i>Services</a></li>
+    <li><a href="skills.html" class="active" aria-current="page"><i class="fa-solid fa-microchip"></i>Skills</a></li>
+    <li><a href="process.html"><i class="fa-solid fa-route"></i>Process</a></li>
+    <li><a href="blog.html"><i class="fa-solid fa-lightbulb"></i>Blog</a></li>
+    <li><a href="index.html#contact"><i class="fa-solid fa-paper-plane"></i>Contact</a></li>
+  </ul>
+  <div class="sk-mobile-footer">
+    <button class="sk-theme-btn btn-theme sk-theme-btn--full" id="themeBtnMob" type="button" aria-label="Toggle theme">
+      <i class="fa-solid fa-sun"></i> <span>Switch to Light Mode</span>
+    </button>
+    <a href="https://wa.me/2349157632360?text=Hello+Lambo+Code,+I+want+to+start+a+project" class="sk-mobile-cta" target="_blank" rel="noopener">
+      <i class="fa-brands fa-whatsapp"></i> Start a Project
+    </a>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════════════════════════════
+     MAIN CONTENT
+     ═══════════════════════════════════════════════════════ -->
+<main>
+
+<!-- ─── HERO ────────────────────────────────────────── -->
+<section class="sk-hero">
+  <div class="sk-container">
+    <h1>Skills &amp; Technologies</h1>
+    <p>Tools and technologies I use to design, develop and deploy modern websites and web applications.</p>
+  </div>
+</section>
+
+<!-- ─── SKILLS GROUPS ───────────────────────────────── -->
+<section class="sk-skills">
+  <div class="sk-container">
+    
+    <!-- Frontend -->
+    <div class="sk-section">
+      <h2>Frontend</h2>
+      <div class="sk-grid">
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-brands fa-html5"></i></div>
+          <h3>HTML5</h3>
+          <p>Used to structure web pages with semantic markup and accessibility in mind.</p>
+        </div>
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-brands fa-css3-alt"></i></div>
+          <h3>CSS3</h3>
+          <p>Used for styling layouts, responsive design and visual presentation.</p>
+        </div>
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-brands fa-js"></i></div>
+          <h3>JavaScript</h3>
+          <p>Used to create interactive interfaces and client-side functionality.</p>
+        </div>
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-brands fa-react"></i></div>
+          <h3>React</h3>
+          <p>Used for building component-based user interfaces and interactive applications.</p>
+        </div>
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-solid fa-n"></i></div>
+          <h3>Next.js</h3>
+          <p>Used for building full-stack React applications with server-side rendering and routing.</p>
+        </div>
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-solid fa-code"></i></div>
+          <h3>TypeScript</h3>
+          <p>Used for type-safe JavaScript development and improved code reliability.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Backend -->
+    <div class="sk-section">
+      <h2>Backend</h2>
+      <div class="sk-grid">
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-brands fa-node-js"></i></div>
+          <h3>Node.js</h3>
+          <p>Used for server-side JavaScript development and API creation.</p>
+        </div>
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-brands fa-php"></i></div>
+          <h3>PHP</h3>
+          <p>Used for server-side development and backend logic.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Database -->
+    <div class="sk-section">
+      <h2>Database</h2>
+      <div class="sk-grid">
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-solid fa-database"></i></div>
+          <h3>MongoDB</h3>
+          <p>Used for NoSQL database storage and flexible document-based data management.</p>
+        </div>
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-solid fa-server"></i></div>
+          <h3>Supabase</h3>
+          <p>Used for PostgreSQL database, authentication and real-time features.</p>
+        </div>
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-solid fa-table"></i></div>
+          <h3>MySQL</h3>
+          <p>Used for relational database storage and structured data management.</p>
+        </div>
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-solid fa-layer-group"></i></div>
+          <h3>Mongoose</h3>
+          <p>Used as an ODM for MongoDB to model application data and schemas.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Tools & Services -->
+    <div class="sk-section">
+      <h2>Tools &amp; Services</h2>
+      <div class="sk-grid">
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-solid fa-money-bill-wave"></i></div>
+          <h3>Paystack</h3>
+          <p>Used for payment integration and secure online transactions.</p>
+        </div>
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-solid fa-cloud"></i></div>
+          <h3>Cloudinary</h3>
+          <p>Used for image upload, storage and optimization.</p>
+        </div>
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-brands fa-git-alt"></i></div>
+          <h3>Git</h3>
+          <p>Used for version control and collaborative development.</p>
+        </div>
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-brands fa-github"></i></div>
+          <h3>GitHub</h3>
+          <p>Used for code hosting, version control and project collaboration.</p>
+        </div>
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-solid fa-rocket"></i></div>
+          <h3>Vercel</h3>
+          <p>Used for deployment and hosting of web applications.</p>
+        </div>
+        <div class="sk-skill">
+          <div class="sk-skill-icon"><i class="fa-solid fa-icons"></i></div>
+          <h3>Font Awesome</h3>
+          <p>Used for icons and visual elements in web interfaces.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ─── WHAT I CAN BUILD ───────────────────────────── -->
+<section class="sk-build">
+  <div class="sk-container">
+    <h2>What I Can <span class="or">Build</span></h2>
+    <div class="sk-build-grid">
+      <div class="sk-build-item">
+        <i class="fa-solid fa-desktop"></i>
+        <span>Responsive Websites</span>
+      </div>
+      <div class="sk-build-item">
+        <i class="fa-solid fa-building"></i>
+        <span>Business Websites</span>
+      </div>
+      <div class="sk-build-item">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span>E-commerce Stores</span>
+      </div>
+      <div class="sk-build-item">
+        <i class="fa-solid fa-utensils"></i>
+        <span>Restaurant Websites</span>
+      </div>
+      <div class="sk-build-item">
+        <i class="fa-solid fa-user"></i>
+        <span>Portfolio Websites</span>
+      </div>
+      <div class="sk-build-item">
+        <i class="fa-solid fa-laptop-code"></i>
+        <span>Web Applications</span>
+      </div>
+      <div class="sk-build-item">
+        <i class="fa-solid fa-lock"></i>
+        <span>Authentication Systems</span>
+      </div>
+      <div class="sk-build-item">
+        <i class="fa-solid fa-database"></i>
+        <span>Database-driven Applications</span>
+      </div>
+      <div class="sk-build-item">
+        <i class="fa-solid fa-calendar-check"></i>
+        <span>Booking Systems</span>
+      </div>
+      <div class="sk-build-item">
+        <i class="fa-solid fa-chart-line"></i>
+        <span>Admin Dashboards</span>
+      </div>
+      <div class="sk-build-item">
+        <i class="fa-solid fa-plug"></i>
+        <span>API Integrations</span>
+      </div>
+      <div class="sk-build-item">
+        <i class="fa-solid fa-credit-card"></i>
+        <span>Payment Integration</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ─── PROJECT CONNECTIONS ───────────────────────── -->
+<section class="sk-projects">
+  <div class="sk-container">
+    <h2>Technologies in <span class="or">Projects</span></h2>
+    <div class="sk-project-grid">
+      
+      <div class="sk-project-card">
+        <h3>LamboReads</h3>
+        <div class="sk-project-tech">
+          <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>Supabase</span>
+        </div>
+        <a href="project-lamboreads.html" class="sk-project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="sk-project-card">
+        <h3>LamboFoods</h3>
+        <div class="sk-project-tech">
+          <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>Supabase</span>
+        </div>
+        <a href="project-lambofoods.html" class="sk-project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="sk-project-card">
+        <h3>LamboBoost</h3>
+        <div class="sk-project-tech">
+          <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>MongoDB</span>
+        </div>
+        <a href="project-lamboboost.html" class="sk-project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="sk-project-card">
+        <h3>StayBridge</h3>
+        <div class="sk-project-tech">
+          <span>Next.js</span>
+          <span>TypeScript</span>
+          <span>Node.js</span>
+        </div>
+        <a href="project-staybridge.html" class="sk-project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="sk-project-card">
+        <h3>Versatile Pub</h3>
+        <div class="sk-project-tech">
+          <span>Node.js</span>
+          <span>MongoDB</span>
+          <span>Paystack</span>
+        </div>
+        <a href="project-versatile.html" class="sk-project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+      <div class="sk-project-card">
+        <h3>Deskon Academy</h3>
+        <div class="sk-project-tech">
+          <span>HTML5</span>
+          <span>CSS3</span>
+          <span>JavaScript</span>
+        </div>
+        <a href="project-deskon.html" class="sk-project-link">View Project <i class="fa-solid fa-arrow-right"></i></a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ─── CONTINUOUS LEARNING ─────────────────────────── -->
+<section class="sk-learning">
+  <div class="sk-container">
+    <div class="sk-learning-inner">
+      <h2>Continuous <span class="or">Learning</span></h2>
+      <p>My skillset continues to evolve through hands-on project work and focused learning. I actively explore new tools and frameworks that solve real development problems, always prioritizing practical application over theoretical knowledge. The technologies listed here are ones I have actually used in production projects, not just tutorials.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ─── CTA ─────────────────────────────────────────── -->
+<section class="sk-cta">
+  <div class="sk-container sk-cta-inner">
+    <h2>Have a project in mind?</h2>
+    <p>Let's discuss what you want to build and find the right approach for your project.</p>
+    <div class="sk-cta-actions">
+      <a href="index.html#contact" class="sk-btn sk-btn--cta">
+        Start a Project
+      </a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════════
+     FOOTER (matches homepage)
+     ═══════════════════════════════════════════════════════ -->
+<footer>
+  <div class="sk-foot-accent"></div>
+  <div class="sk-foot-inner">
+    <div class="sk-foot-grid">
+
+      <div class="sk-foot-brand">
+        <a href="index.html" class="sk-nav-logo">
+          <img src="logo.png" alt="Lambo Code logo" width="34" height="34" loading="lazy" decoding="async">
+          <span class="sk-nav-brand">LAMBO<span class="or">CODE</span></span>
+        </a>
+        <p>Designing and building modern websites and web applications for businesses and brands.</p>
+        <div class="sk-foot-social">
+          <a href="https://wa.me/2349157632360" target="_blank" rel="noopener" title="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          <a href="mailto:isaiahomoruyi4@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.tiktok.com/@omoruyi.isaiah" target="_blank" rel="noopener" title="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+          <a href="https://linkedin.com/in/omoruyi-isaiah" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+
+      <div class="sk-foot-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="work.html">Work</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="skills.html">Skills</a></li>
+          <li><a href="process.html">Process</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="sk-foot-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html">Website Development</a></li>
+          <li><a href="services.html">E-commerce</a></li>
+          <li><a href="services.html">Restaurant Websites</a></li>
+          <li><a href="services.html">Web Applications</a></li>
+          <li><a href="services.html">Booking Platforms</a></li>
+          <li><a href="services.html">Custom Solutions</a></li>
+        </ul>
+      </div>
+
+      <div class="sk-foot-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="mailto:isaiahomoruyi4@gmail.com"><i class="fa-solid fa-envelope"></i>isaiahomoruyi4@gmail.com</a></li>
+          <li><a href="https://wa.me/2349157632360" target="_blank" rel="noopener"><i class="fa-brands fa-whatsapp"></i>WhatsApp</a></li>
+          <li><a href="tel:+2349157632360"><i class="fa-solid fa-phone"></i>09157632360</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="sk-foot-bottom">
+      <p>&copy; 2026 Lambo Code by Omoruyi Isaiah. All rights reserved.</p>
+      <div class="sk-foot-avail">
+        <span class="sk-foot-dot"></span>
+        Available for new projects
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ─── CHATBOT WIDGET ──────────────────────────────── -->
+<div id="chatbotContainer" class="chatbot-container">
+  <button id="chatbotToggle" class="chatbot-toggle" aria-label="Open AI Chat">
+    <span class="chatbot-icon"><img src="logo.png" alt="Lambo Code logo"></span>
+    <span class="chatbot-dot"></span>
+  </button>
+  <div id="chatbotWindow" class="chatbot-window">
+    <div class="chatbot-header">
+      <div class="chatbot-header-content">
+        <h3>Lambo AI Assistant</h3>
+        <p class="chatbot-status">Always here to help</p>
+      </div>
+      <button id="closeChatbot" class="chatbot-close" aria-label="Close chat"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="chatbot-messages" id="chatbotMessages">
+      <div class="chatbot-message bot-message">
+        <div class="message-content">
+          <p>Hi! I'm Lambo, your AI assistant for Lambo Code. I can help answer questions about web development services, pricing, and hiring Omoruyi. How can I help you today?</p>
+        </div>
+      </div>
+    </div>
+    <div class="chatbot-input-area">
+      <form id="chatbotForm" class="chatbot-form">
+        <input type="text" id="chatbotInput" placeholder="Ask about Lambo Code services..." autocomplete="off">
+        <button type="submit" class="chatbot-send" aria-label="Send message"><i class="fas fa-paper-plane"></i></button>
+      </form>
+    </div>
+  </div>
+</div>
+
+<!-- ─── SCRIPTS ─────────────────────────────────────── -->
+<script src="home.js"></script>
+<script>
+(function(){
+  const overlay = document.getElementById('mobOverlay');
+  const closeBtn = document.getElementById('mobClose');
+  const menu = document.getElementById('mobNav');
+  const hamburger = document.getElementById('hamburger');
+  const close = () => {
+    menu?.classList.remove('open');
+    overlay?.classList.remove('open');
+    hamburger?.classList.remove('is-open');
+    hamburger?.setAttribute('aria-expanded','false');
+    document.body.classList.remove('menu-open');
+  };
+  overlay?.addEventListener('click', close);
+  closeBtn?.addEventListener('click', close);
+  menu?.querySelectorAll('a').forEach(a => a.addEventListener('click', close));
+})();
+</script>
+<script src="chatbot.js"></script>
+</body>
+</html>

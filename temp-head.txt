@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<!-- ─── PRIMARY SEO ──────────────────────────────────── -->
+<title>Lambo Code | Full-Stack Web Developer — Benin City, Nigeria</title>
+<meta name="description" content="Lambo Code is a full-stack web developer based in Benin City, Nigeria. I build premium websites for restaurants, businesses, car rentals, and brands that want to dominate online. Fast delivery, real results.">
+<meta name="keywords" content="web developer Nigeria, full stack developer Benin City, restaurant website Nigeria, business website Nigeria, Lambo Code, Omoruyi Isaiah, web design Benin City, Node.js developer Nigeria, Paystack integration, car rental website Nigeria">
+<meta name="author" content="Omoruyi Isaiah — Lambo Code">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<meta name="googlebot" content="index, follow">
+<meta name="google-site-verification" content="YSzvJcXO8eMFeD5IEmWFGYX3xX1SoqHNxtrsm0-0sX0">
+<link rel="canonical" href="https://lambocode.vercel.app/">
+
+<!-- ─── OPEN GRAPH (Facebook, WhatsApp, LinkedIn) ───── -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Lambo Code">
+<meta property="og:title" content="Lambo Code | Full-Stack Web Developer — Benin City, Nigeria">
+<meta property="og:description" content="I build premium full-stack websites for restaurants, businesses, and brands. Fast, secure, and built to convert. Based in Benin City, Nigeria — available worldwide.">
+<meta property="og:url" content="https://lambocode.vercel.app/">
+<meta property="og:image" content="https://lambocode.vercel.app/logo.png">
+<meta property="og:image:width" content="1024">
+<meta property="og:image:height" content="1024">
+<meta property="og:image:alt" content="Lambo Code — Full-Stack Web Developer Portfolio">
+<meta property="og:locale" content="en_NG">
+
+<!-- ─── TWITTER / X CARD ────────────────────────────── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Lambo Code | Full-Stack Web Developer — Benin City, Nigeria">
+<meta name="twitter:description" content="I build premium full-stack websites for restaurants, businesses, and brands. Fast, secure, and built to convert.">
+<meta name="twitter:image" content="https://lambocode.vercel.app/logo.png">
+<meta name="twitter:image:alt" content="Lambo Code — Full-Stack Web Developer Portfolio">
+<meta name="twitter:creator" content="@omoruyi.isaiah">
+
+<!-- ─── BROWSER / PWA ────────────────────────────────── -->
+<meta name="theme-color" content="#080E14">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Lambo Code">
+<meta name="application-name" content="Lambo Code">
+<meta name="msapplication-TileColor" content="#080E14">
+
+<!-- ─── GEO / LOCAL SEO ──────────────────────────────── -->
+<meta name="geo.region" content="NG-ED">
+<meta name="geo.placename" content="Benin City, Edo State, Nigeria">
+<meta name="geo.position" content="6.3350;5.6037">
+<meta name="ICBM" content="6.3350, 5.6037">
+
+<!-- ─── STRUCTURED DATA (JSON-LD) ───────────────────── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Omoruyi Isaiah",
+  "alternateName": "Lambo Code",
+  "url": "https://lambocode.vercel.app/",
+  "image": "https://lambocode.vercel.app/logo.png",
+  "jobTitle": "Full-Stack Web Developer",
+  "description": "Full-stack web developer based in Benin City, Nigeria. Specialising in premium websites for restaurants, businesses, and brands.",
+  "email": "isaiahomoruyi4@gmail.com",
+  "telephone": "+2349157632360",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Benin City",
+    "addressRegion": "Edo State",
+    "addressCountry": "NG"
+  },
+  "sameAs": [
+    "https://www.tiktok.com/@omoruyi.isaiah",
+    "https://github.com/omoruyi-lambo",
+    "https://wa.me/2349157632360"
+  ],
+  "knowsAbout": ["Node.js", "MongoDB", "JavaScript", "HTML5", "CSS3", "Paystack", "Socket.IO", "Web Development", "Full-Stack Development"],
+  "offers": {
+    "@type": "Offer",
+    "description": "Premium full-stack web development services for restaurants, businesses, car rentals, and barber shops.",
+    "areaServed": "Worldwide",
+    "availableLanguage": "English"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Lambo Code",
+  "url": "https://lambocode.vercel.app/",
+  "description": "Portfolio of Omoruyi Isaiah — Full-Stack Web Developer in Benin City, Nigeria",
+  "author": {
+    "@type": "Person",
+    "name": "Omoruyi Isaiah"
+  }
+}
+</script>
+
+<!-- ─── PRECONNECT ───────────────────────────────────── -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://cdnjs.cloudflare.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Bricolage+Grotesque:opsz,wght@12..60,400;12..60,600;12..60,700;12..60,800&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-Avb2QiuDEEvB4bZJYdft2mNjVShBftLdPG8FJ0V7irTLQ8Uo0qcPxh4Plq7G5tGm0rU+1SPhVotteLpBERwTkw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
